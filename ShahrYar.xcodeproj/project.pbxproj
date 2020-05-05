@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8B2460795900C29983 /* AppDelegate.swift */; };
 		D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8D2460795900C29983 /* SceneDelegate.swift */; };
-		D304EB902460795900C29983 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8F2460795900C29983 /* ViewController.swift */; };
 		D304EB932460795900C29983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB912460795900C29983 /* Main.storyboard */; };
 		D304EB952460795D00C29983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D304EB942460795D00C29983 /* Assets.xcassets */; };
 		D304EB982460795D00C29983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB962460795D00C29983 /* LaunchScreen.storyboard */; };
+		D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CB24615785006D9D88 /* VerifyViewController.swift */; };
+		D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CD2461578E006D9D88 /* RegisterViewController.swift */; };
+		D35553D924616040006D9D88 /* IRANSansMobile_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D324616040006D9D88 /* IRANSansMobile_Black.ttf */; };
+		D35553DA24616040006D9D88 /* IRANSansMobile_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D424616040006D9D88 /* IRANSansMobile_Medium.ttf */; };
+		D35553DB24616040006D9D88 /* IRANSansMobile_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D524616040006D9D88 /* IRANSansMobile_Light.ttf */; };
+		D35553DC24616040006D9D88 /* IRANSansMobile_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D624616040006D9D88 /* IRANSansMobile_UltraLight.ttf */; };
+		D35553DD24616040006D9D88 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D724616040006D9D88 /* IRANSansMobile_Bold.ttf */; };
+		D35553DE24616040006D9D88 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D824616040006D9D88 /* IRANSansMobile.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D304EB882460795900C29983 /* ShahrYar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShahrYar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304EB8B2460795900C29983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D304EB8D2460795900C29983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D304EB8F2460795900C29983 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D304EB922460795900C29983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D304EB942460795D00C29983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D304EB972460795D00C29983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D304EB992460795D00C29983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35553CB24615785006D9D88 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		D35553CD2461578E006D9D88 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D35553D324616040006D9D88 /* IRANSansMobile_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Black.ttf; sourceTree = "<group>"; };
+		D35553D424616040006D9D88 /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
+		D35553D524616040006D9D88 /* IRANSansMobile_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Light.ttf; sourceTree = "<group>"; };
+		D35553D624616040006D9D88 /* IRANSansMobile_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_UltraLight.ttf; sourceTree = "<group>"; };
+		D35553D724616040006D9D88 /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
+		D35553D824616040006D9D88 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,102 @@
 		D304EB8A2460795900C29983 /* ShahrYar */ = {
 			isa = PBXGroup;
 			children = (
+				D35553C7246155FF006D9D88 /* Model */,
+				D35553C6246155FA006D9D88 /* View */,
+				D35553C5246155F0006D9D88 /* Controller */,
+				D35553CF246157DA006D9D88 /* Resources */,
 				D304EB8B2460795900C29983 /* AppDelegate.swift */,
 				D304EB8D2460795900C29983 /* SceneDelegate.swift */,
-				D304EB8F2460795900C29983 /* ViewController.swift */,
-				D304EB912460795900C29983 /* Main.storyboard */,
-				D304EB942460795D00C29983 /* Assets.xcassets */,
 				D304EB962460795D00C29983 /* LaunchScreen.storyboard */,
 				D304EB992460795D00C29983 /* Info.plist */,
 			);
 			path = ShahrYar;
+			sourceTree = "<group>";
+		};
+		D35553C5246155F0006D9D88 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D35553C8246156EC006D9D88 /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D35553C6246155FA006D9D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D304EB912460795900C29983 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D35553C7246155FF006D9D88 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D35553C8246156EC006D9D88 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D35553C9246156F4006D9D88 /* Verify */,
+				D35553CA246156FE006D9D88 /* Register */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D35553C9246156F4006D9D88 /* Verify */ = {
+			isa = PBXGroup;
+			children = (
+				D35553CB24615785006D9D88 /* VerifyViewController.swift */,
+			);
+			path = Verify;
+			sourceTree = "<group>";
+		};
+		D35553CA246156FE006D9D88 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D35553CD2461578E006D9D88 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D35553CF246157DA006D9D88 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D35553D0246157E5006D9D88 /* Photos */,
+				D35553D124616012006D9D88 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D35553D0246157E5006D9D88 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				D304EB942460795D00C29983 /* Assets.xcassets */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		D35553D124616012006D9D88 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D35553D224616033006D9D88 /* IRANSansMobile */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D35553D224616033006D9D88 /* IRANSansMobile */ = {
+			isa = PBXGroup;
+			children = (
+				D35553D324616040006D9D88 /* IRANSansMobile_Black.ttf */,
+				D35553D724616040006D9D88 /* IRANSansMobile_Bold.ttf */,
+				D35553D524616040006D9D88 /* IRANSansMobile_Light.ttf */,
+				D35553D424616040006D9D88 /* IRANSansMobile_Medium.ttf */,
+				D35553D624616040006D9D88 /* IRANSansMobile_UltraLight.ttf */,
+				D35553D824616040006D9D88 /* IRANSansMobile.ttf */,
+			);
+			path = IRANSansMobile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +226,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35553DB24616040006D9D88 /* IRANSansMobile_Light.ttf in Resources */,
+				D35553DC24616040006D9D88 /* IRANSansMobile_UltraLight.ttf in Resources */,
+				D35553DD24616040006D9D88 /* IRANSansMobile_Bold.ttf in Resources */,
 				D304EB982460795D00C29983 /* LaunchScreen.storyboard in Resources */,
 				D304EB952460795D00C29983 /* Assets.xcassets in Resources */,
 				D304EB932460795900C29983 /* Main.storyboard in Resources */,
+				D35553DA24616040006D9D88 /* IRANSansMobile_Medium.ttf in Resources */,
+				D35553D924616040006D9D88 /* IRANSansMobile_Black.ttf in Resources */,
+				D35553DE24616040006D9D88 /* IRANSansMobile.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D304EB902460795900C29983 /* ViewController.swift in Sources */,
+				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
 				D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */,
 				D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */,
+				D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
