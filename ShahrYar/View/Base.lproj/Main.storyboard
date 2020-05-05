@@ -112,13 +112,23 @@
                     <view key="view" contentMode="scaleToFill" id="3KG-wj-2Zf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="Ota-Wr-Tf9">
+                                <rect key="frame" x="228" y="0.0" width="92" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="aAK-vH-tkg">
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.28235294117647058" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="D3V-rE-XTa"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urb-x5-1u3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="833" y="241"/>
+            <point key="canvasLocation" x="832.5" y="240.8450704225352"/>
         </scene>
     </scenes>
     <resources>
