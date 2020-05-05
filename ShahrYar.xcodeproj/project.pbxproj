@@ -20,6 +20,8 @@
 		D35553DC24616040006D9D88 /* IRANSansMobile_UltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D624616040006D9D88 /* IRANSansMobile_UltraLight.ttf */; };
 		D35553DD24616040006D9D88 /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D724616040006D9D88 /* IRANSansMobile_Bold.ttf */; };
 		D35553DE24616040006D9D88 /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D824616040006D9D88 /* IRANSansMobile.ttf */; };
+		D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553E02461A1F5006D9D88 /* HomeViewController.swift */; };
+		D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553E32461AF97006D9D88 /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		D35553D624616040006D9D88 /* IRANSansMobile_UltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_UltraLight.ttf; sourceTree = "<group>"; };
 		D35553D724616040006D9D88 /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
 		D35553D824616040006D9D88 /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
+		D35553E02461A1F5006D9D88 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D35553E32461AF97006D9D88 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		D35553C5246155F0006D9D88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D35553DF2461A1E4006D9D88 /* Home */,
 				D35553C8246156EC006D9D88 /* Login */,
 			);
 			path = Controller;
@@ -108,6 +113,7 @@
 		D35553C8246156EC006D9D88 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				D35553E22461AF8B006D9D88 /* Intro */,
 				D35553C9246156F4006D9D88 /* Verify */,
 				D35553CA246156FE006D9D88 /* Register */,
 			);
@@ -166,6 +172,22 @@
 				D35553D824616040006D9D88 /* IRANSansMobile.ttf */,
 			);
 			path = IRANSansMobile;
+			sourceTree = "<group>";
+		};
+		D35553DF2461A1E4006D9D88 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D35553E02461A1F5006D9D88 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D35553E22461AF8B006D9D88 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				D35553E32461AF97006D9D88 /* IntroViewController.swift */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */,
 				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
 				D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */,
+				D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */,
 				D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */,
 				D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */,
 			);
@@ -393,7 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -413,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
