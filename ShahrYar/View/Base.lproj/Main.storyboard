@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRq-IK-dou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRq-IK-dou">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -146,7 +146,7 @@
                                         <fragment content="پارکینگ یاب">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -166,7 +166,7 @@
                                         <fragment content="جهت یابی">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -186,7 +186,7 @@
                                         <fragment content="شماره های صندوق">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -206,7 +206,7 @@
                                         <fragment content="شهروند الکترونیک">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -226,7 +226,7 @@
                                         <fragment content="اقدامات">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -246,7 +246,7 @@
                                         <fragment content="من اینجام">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="15"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -266,7 +266,7 @@
                                         <fragment content="ارسال مشکل">
                                             <attributes>
                                                 <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="27" name="IRANSansMobile-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="27"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -327,10 +327,10 @@
             </objects>
             <point key="canvasLocation" x="941" y="241"/>
         </scene>
-        <!--View Controller-->
+        <!--Verify View Controller-->
         <scene sceneID="92o-kP-DcU">
             <objects>
-                <viewController id="KMq-ZT-aWq" sceneMemberID="viewController">
+                <viewController id="KMq-ZT-aWq" customClass="VerifyViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mhh-Wm-C4L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -383,6 +383,9 @@
                                         <state key="normal" title="تایید">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitButton:" destination="KMq-ZT-aWq" eventType="touchUpInside" id="wtm-K2-Bhw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBq-08-QHe">
                                         <rect key="frame" x="60" y="139.5" width="122" height="33"/>
@@ -391,6 +394,9 @@
                                         <state key="normal" title="تغییر شماره تلفن">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="ChangePhoneNumberButton:" destination="KMq-ZT-aWq" eventType="touchUpInside" id="Us8-nR-pl2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
