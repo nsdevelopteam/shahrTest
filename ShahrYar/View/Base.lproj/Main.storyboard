@@ -1,26 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8vK-cn-y5c">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="IRANSansMobile.ttf">
+            <string>IRANSansMobile</string>
+        </array>
+        <array key="IRANSansMobile_Bold.ttf">
+            <string>IRANSansMobile-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="QWC-yY-weJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="252-q9-ucm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sn0-3g-7Wh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="gvm-vg-i8u">
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="dcy-0N-blN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-Ro-gLl">
+                                <rect key="frame" x="228" y="0.0" width="92" height="270"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShahrdariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ILh-18-goD">
+                                <rect key="frame" x="110" y="84" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Bti-et-iJa"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-Na-7I8">
+                                <rect key="frame" x="39" y="192" width="242" height="132.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهرداری گرگان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sy-fa-IdB">
+                                        <rect key="frame" x="50" y="0.0" width="142" height="25.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25.5" id="EGj-Re-sMe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لطفا شماره تلفن همراه خود را وارد نمایید" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyc-bf-cra">
+                                        <rect key="frame" x="0.0" y="32.5" width="242" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="19" id="NDK-ee-l8t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="مثال: ۰۹۱۲۳۴۵۶۷۸۹" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hRd-9z-QMw">
+                                        <rect key="frame" x="40" y="58.5" width="162" height="34"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-Ie-5Q9">
+                                        <rect key="frame" x="60" y="99.5" width="122" height="33"/>
+                                        <color key="backgroundColor" red="0.2196078431372549" green="0.36470588235294116" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                        <state key="normal" title="ارسال کد تایید">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hyc-bf-cra" firstAttribute="leading" secondItem="P4O-Na-7I8" secondAttribute="leadingMargin" id="0OI-Fs-t5B"/>
+                                    <constraint firstItem="8Sy-fa-IdB" firstAttribute="leading" secondItem="P4O-Na-7I8" secondAttribute="leading" constant="50" id="eCk-Si-FQ1"/>
+                                    <constraint firstItem="WOr-Ie-5Q9" firstAttribute="leading" secondItem="P4O-Na-7I8" secondAttribute="leading" constant="60" id="qFh-LZ-bGn"/>
+                                    <constraint firstItem="hRd-9z-QMw" firstAttribute="leading" secondItem="P4O-Na-7I8" secondAttribute="leading" constant="40" id="tu9-ku-sfT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294119999998" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="P4O-Na-7I8" firstAttribute="leading" secondItem="v9x-js-1q4" secondAttribute="leading" constant="39" id="1TP-bN-stu"/>
+                            <constraint firstItem="ILh-18-goD" firstAttribute="leading" secondItem="gvm-vg-i8u" secondAttribute="trailing" constant="18" id="5dK-oC-ML1"/>
+                            <constraint firstItem="v9x-js-1q4" firstAttribute="bottom" secondItem="gvm-vg-i8u" secondAttribute="bottom" constant="298" id="Lab-cC-8l0"/>
+                            <constraint firstItem="fTY-Ro-gLl" firstAttribute="trailing" secondItem="v9x-js-1q4" secondAttribute="trailing" id="TZI-G3-sz6"/>
+                            <constraint firstItem="ILh-18-goD" firstAttribute="top" secondItem="v9x-js-1q4" secondAttribute="top" constant="84" id="VR7-L1-U7K"/>
+                            <constraint firstItem="ILh-18-goD" firstAttribute="centerX" secondItem="P4O-Na-7I8" secondAttribute="centerX" id="W2p-qt-sla"/>
+                            <constraint firstItem="fTY-Ro-gLl" firstAttribute="leading" secondItem="ILh-18-goD" secondAttribute="trailing" constant="18" id="Wbf-De-m7p"/>
+                            <constraint firstItem="P4O-Na-7I8" firstAttribute="top" secondItem="ILh-18-goD" secondAttribute="bottom" constant="8" id="Xlr-Nf-t26"/>
+                            <constraint firstItem="gvm-vg-i8u" firstAttribute="top" secondItem="fTY-Ro-gLl" secondAttribute="top" id="dyX-tS-MrN"/>
+                            <constraint firstItem="gvm-vg-i8u" firstAttribute="bottom" secondItem="fTY-Ro-gLl" secondAttribute="bottom" id="e2p-Pt-gpY"/>
+                            <constraint firstItem="gvm-vg-i8u" firstAttribute="top" secondItem="v9x-js-1q4" secondAttribute="top" id="f9D-Jh-DKb"/>
+                            <constraint firstItem="gvm-vg-i8u" firstAttribute="leading" secondItem="v9x-js-1q4" secondAttribute="leading" id="meV-Qz-5ql"/>
+                            <constraint firstItem="ILh-18-goD" firstAttribute="centerX" secondItem="sn0-3g-7Wh" secondAttribute="centerX" id="oxH-mL-ukR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v9x-js-1q4"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfn-LV-lrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="50.625" y="240.8450704225352"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OKm-pd-ucN">
+            <objects>
+                <viewController id="8vK-cn-y5c" customClass="ViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3KG-wj-2Zf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.28235294117647058" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="D3V-rE-XTa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urb-x5-1u3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="833" y="241"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ShahrdariLogo" width="236" height="236"/>
+        <image name="Side" width="86" height="273"/>
+    </resources>
 </document>
