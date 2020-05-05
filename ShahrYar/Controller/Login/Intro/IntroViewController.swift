@@ -20,6 +20,7 @@ class IntroViewController: UIViewController {
     }
     
     @IBAction func sendSMS(_ sender: UIButton) {
+        
     }
     
 }
