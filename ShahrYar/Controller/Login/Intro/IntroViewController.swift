@@ -15,7 +15,8 @@ class IntroViewController: UIViewController {
     @IBOutlet weak var numberField: UITextField!
     @IBOutlet weak var sendSMSOutlet: UIButton!
     let verifyURL = "http://moshkelateshahri.xyz/api/verify"
-        
+    let defaults = UserDefaults.standard
+
         override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +25,7 @@ class IntroViewController: UIViewController {
     func sendSMS() {
         var parameters = ["mobile": ""]
         parameters["mobile"] = numberField.text
-    
+        defaults.set(numberField.text, forKey: "Number")
         
         AF.request(verifyURL,
                    method: .post,
