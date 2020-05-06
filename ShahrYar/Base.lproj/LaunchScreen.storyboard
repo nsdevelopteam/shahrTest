@@ -62,8 +62,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="نسخه ۱.۰.۰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-rd-Ol7">
-                                <rect key="frame" x="123" y="482" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه ۱.۰.۰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-rd-Ol7">
+                                <rect key="frame" x="100" y="482.5" width="120" height="21.5"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -71,17 +71,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.28235294117647058" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eKK-rd-Ol7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="2dW-OV-Cfn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eKK-rd-Ol7" secondAttribute="bottom" constant="65" id="ANe-EA-uIb"/>
                             <constraint firstItem="yId-Gc-UYW" firstAttribute="top" secondItem="bc2-1m-Vkt" secondAttribute="top" id="Is4-FP-0Zx"/>
                             <constraint firstItem="bc2-1m-Vkt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PUl-98-drM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eKK-rd-Ol7" secondAttribute="bottom" constant="64" id="TTS-bx-Vxq"/>
                             <constraint firstItem="th6-Wm-EXs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U97-Oo-wdQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yId-Gc-UYW" secondAttribute="bottom" constant="298" id="WzJ-t2-5GF"/>
+                            <constraint firstItem="eKK-rd-Ol7" firstAttribute="centerX" secondItem="4eb-0H-8B2" secondAttribute="centerX" id="Xb0-C1-u29"/>
                             <constraint firstItem="yId-Gc-UYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cGw-L1-pNV"/>
                             <constraint firstItem="4eb-0H-8B2" firstAttribute="top" secondItem="th6-Wm-EXs" secondAttribute="bottom" constant="8" id="dmJ-eQ-Pkb"/>
                             <constraint firstItem="th6-Wm-EXs" firstAttribute="leading" secondItem="yId-Gc-UYW" secondAttribute="trailing" constant="18" id="fH3-6I-6tN"/>
                             <constraint firstItem="yId-Gc-UYW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ffF-Um-9be"/>
-                            <constraint firstItem="th6-Wm-EXs" firstAttribute="centerX" secondItem="eKK-rd-Ol7" secondAttribute="centerX" id="nr1-tM-9HL"/>
+                            <constraint firstItem="eKK-rd-Ol7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="p2Q-51-1ja"/>
                             <constraint firstItem="th6-Wm-EXs" firstAttribute="centerX" secondItem="4eb-0H-8B2" secondAttribute="centerX" id="vRm-df-bBz"/>
                             <constraint firstItem="yId-Gc-UYW" firstAttribute="bottom" secondItem="bc2-1m-Vkt" secondAttribute="bottom" id="y1i-2R-thN"/>
                             <constraint firstItem="th6-Wm-EXs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="zTz-Tg-sPR"/>
