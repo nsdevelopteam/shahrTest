@@ -19,6 +19,7 @@ class VerifyViewController: UIViewController {
     let submitCodeURL = "http://moshkelateshahri.xyz/api/register"
     let defaults = UserDefaults.standard
     var isUserRegisterdBefore = false
+    var api_token = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +31,8 @@ class VerifyViewController: UIViewController {
         
         var parameters = ["mobile": "", "code": ""]
         
-        //    parameters["mobile"] = defaults.string(forKey: "Number")
-        parameters["mobile"] = "09904863541"
+        parameters["mobile"] = defaults.string(forKey: "Number")
+//        parameters["mobile"] = "09904863541"
         parameters["code"] = smsTextField.text
         AF.request(submitCodeURL,
                    method: .post,
@@ -40,8 +41,8 @@ class VerifyViewController: UIViewController {
                         let result = JSON(responseData.value!)
                         print(result)
                         print(result["api_token"])
-                        //                    self.defaults.set(result["api_token"], forKey: "api_token")
-                        if result["profile"].string == nil {
+                        self.api_token = result["api_token"].stringValue
+                        if result["profile"] == JSON.null {
                             print("false")
                             self.isUserRegisterdBefore = false
                         } else {
@@ -50,6 +51,8 @@ class VerifyViewController: UIViewController {
                         }
                     }
         }
+            self.defaults.set(api_token, forKey: "api_token")
+
     }
     
     func checkUser() {
@@ -64,7 +67,7 @@ class VerifyViewController: UIViewController {
     }
     
     @IBAction func submitButton(_ sender: Any) {
-//        submitVerficationCode()
+        submitVerficationCode()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
         vc.modalPresentationStyle = .overFullScreen
