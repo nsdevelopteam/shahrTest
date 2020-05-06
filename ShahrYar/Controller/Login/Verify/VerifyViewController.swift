@@ -13,9 +13,18 @@ import SwiftyJSON
 class VerifyViewController: UIViewController {
     
     @IBOutlet var smsTextField: UITextField!
+    @IBOutlet weak var verifyOutlet: UIButton!
+    @IBOutlet weak var changePhoneNumberOutlet: UIButton!
+    
     let submitCodeURL = "http://moshkelateshahri.xyz/api/register"
     let defaults = UserDefaults.standard
     var isUserRegisterdBefore = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        verifyOutlet.layer.cornerRadius = 5
+        changePhoneNumberOutlet.layer.cornerRadius = 5
+    }
     
     func submitVerficationCode() {
         
@@ -45,14 +54,21 @@ class VerifyViewController: UIViewController {
     
     func checkUser() {
         if isUserRegisterdBefore {
-            //bere too view asli
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true, completion: nil)
         } else {
-            //bere too view register
+            
         }
     }
     
     @IBAction func submitButton(_ sender: Any) {
-        submitVerficationCode()
+//        submitVerficationCode()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func ChangePhoneNumberButton(_ sender: Any) {
