@@ -23,9 +23,15 @@ class IntroViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         hideNavigationBar()
         
         sendSMSOutlet.layer.cornerRadius = 5
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(
+        title: "بازگشت", style: .plain, target: nil, action: nil)
+        
+        navigationItem.backBarButtonItem!.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "IRANSansMobile", size: 17)!], for: UIControl.State.normal)
     }
     
     @IBAction func sendSMS(_ sender: UIButton) {
