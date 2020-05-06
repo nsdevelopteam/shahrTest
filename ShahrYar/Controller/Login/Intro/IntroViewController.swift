@@ -17,6 +17,7 @@ class IntroViewController: UIViewController {
     
     let verifyURL = "http://moshkelateshahri.xyz/api/verify"
     var activityIndicator = UIActivityIndicatorView()
+    var UIExtensionsVariable = UIExtensions.shared
     let defaults = UserDefaults.standard
     var indicatorView = UIView()
     var container = UIView()
@@ -24,7 +25,7 @@ class IntroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        hideNavigationBar()
+        UIExtensionsVariable.hideNavigationBar(vc: self)
         
         sendSMSOutlet.layer.cornerRadius = 5
         

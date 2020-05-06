@@ -21,10 +21,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var eghdamat: UIButton!
     @IBOutlet weak var itCitizenOutlet: UIButton!
     
-    
+    var UIExtensionsVariable = UIExtensions.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIExtensionsVariable.hideNavigationBar(vc: self)
         
         setCornerRedius(sendProblemOutlet)
         setCornerRedius(parkingYabOutlet)

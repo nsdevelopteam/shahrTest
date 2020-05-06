@@ -13,6 +13,7 @@
 		D304EB932460795900C29983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB912460795900C29983 /* Main.storyboard */; };
 		D304EB952460795D00C29983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D304EB942460795D00C29983 /* Assets.xcassets */; };
 		D304EB982460795D00C29983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB962460795D00C29983 /* LaunchScreen.storyboard */; };
+		D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338B28924633B7D00B94C62 /* UIExtensions.swift */; };
 		D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CB24615785006D9D88 /* VerifyViewController.swift */; };
 		D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CD2461578E006D9D88 /* RegisterViewController.swift */; };
 		D35553D924616040006D9D88 /* IRANSansMobile_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35553D324616040006D9D88 /* IRANSansMobile_Black.ttf */; };
@@ -36,6 +37,7 @@
 		D304EB942460795D00C29983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D304EB972460795D00C29983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D304EB992460795D00C29983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D338B28924633B7D00B94C62 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		D35553CB24615785006D9D88 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		D35553CD2461578E006D9D88 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D35553D324616040006D9D88 /* IRANSansMobile_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Black.ttf; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		D304EB8A2460795900C29983 /* ShahrYar */ = {
 			isa = PBXGroup;
 			children = (
+				D338B28624633B0C00B94C62 /* Helper */,
 				D35553C6246155FA006D9D88 /* View */,
 				D35553C5246155F0006D9D88 /* Controller */,
 				D35553CF246157DA006D9D88 /* Resources */,
@@ -99,6 +102,14 @@
 				D304EB992460795D00C29983 /* Info.plist */,
 			);
 			path = ShahrYar;
+			sourceTree = "<group>";
+		};
+		D338B28624633B0C00B94C62 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D338B28924633B7D00B94C62 /* UIExtensions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		D35553C5246155F0006D9D88 /* Controller */ = {
@@ -339,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */,
+				D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */,
 				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
 				D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */,
 				D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */,
@@ -489,7 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -510,7 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
