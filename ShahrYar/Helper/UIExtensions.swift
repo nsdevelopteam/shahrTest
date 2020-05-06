@@ -21,5 +21,8 @@ class UIExtensions: UIViewController {
         currentVc?.navigationController?.navigationBar.isTranslucent = true
         currentVc?.navigationController?.navigationBar.tintColor = .white
     }
-
+    
+    func setCornerRedius(_ button: UIButton) {
+        button.layer.cornerRadius = button.frame.width / 2
+    }
 }

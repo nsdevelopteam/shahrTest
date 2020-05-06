@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var eghdamat: UIButton!
     @IBOutlet weak var itCitizenOutlet: UIButton!
     
+    // MARK: - Variables
     var UIExtensionsVariable = UIExtensions.shared
     
     override func viewDidLoad() {
@@ -28,28 +29,33 @@ class HomeViewController: UIViewController {
         
         UIExtensionsVariable.hideNavigationBar(vc: self)
         
-        setCornerRedius(sendProblemOutlet)
-        setCornerRedius(parkingYabOutlet)
-        setCornerRedius(jahatYabiOutlet)
-        setCornerRedius(sandoghNumbersOutlet)
-        setCornerRedius(ImHereOutlet)
-        setCornerRedius(eghdamat)
-        setCornerRedius(itCitizenOutlet)
+        UIExtensionsVariable.setCornerRedius(sendProblemOutlet)
+        UIExtensionsVariable.setCornerRedius(parkingYabOutlet)
+        UIExtensionsVariable.setCornerRedius(jahatYabiOutlet)
+        UIExtensionsVariable.setCornerRedius(sandoghNumbersOutlet)
+        UIExtensionsVariable.setCornerRedius(ImHereOutlet)
+        UIExtensionsVariable.setCornerRedius(eghdamat)
+        UIExtensionsVariable.setCornerRedius(itCitizenOutlet)
         
-//        SideMenuManager.default.rightMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
-//        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
-
-        
-        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
     }
     
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.left:
+                let menu = storyboard!.instantiateViewController(withIdentifier: "sidemenu") as! SideMenuNavigationController
+                present(menu, animated: true, completion: nil)
+            default:
+                break
+            }
+        }
+    }
+    
+    // MARK: - Actions
     @IBAction func sideMenu(_ sender: Any) {
-//         let menu = storyboard!.instantiateViewController(withIdentifier: "sidemenu") as! SideMenuNavigationController
-//        present(menu, animated: true, completion: nil)
-    }
-    
-    func setCornerRedius(_ button: UIButton) {
-        button.layer.cornerRadius = button.frame.width / 2
     }
     
 }
