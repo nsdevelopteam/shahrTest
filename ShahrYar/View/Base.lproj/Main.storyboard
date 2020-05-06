@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRq-IK-dou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K9R-fs-jd7">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,6 +277,13 @@
                         <color key="backgroundColor" red="0.28235294117647058" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="D3V-rE-XTa"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VnN-Uz-jIa">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="ellipsis" catalog="system" id="aJJ-z2-GTM">
+                            <connections>
+                                <action selector="sideMenu:" destination="8vK-cn-y5c" id="C3K-s3-Ujz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ImHereOutlet" destination="T78-Xh-cAR" id="6Nz-Qh-MN1"/>
                         <outlet property="eghdamat" destination="GoJ-pG-tGk" id="NPi-31-o3K"/>
@@ -289,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urb-x5-1u3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="241"/>
+            <point key="canvasLocation" x="5077.5" y="240.8450704225352"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zMZ-RE-lGP">
@@ -351,7 +358,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zrS-T8-7IR">
-                                <rect key="frame" x="39" y="236" width="242" height="172.5"/>
+                                <rect key="frame" x="39" y="236" width="242" height="168.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهرداری گرگان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-Na-UOq">
                                         <rect key="frame" x="50" y="0.0" width="142" height="25.5"/>
@@ -377,7 +384,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-PA-YEY">
-                                        <rect key="frame" x="60" y="99.5" width="122" height="33"/>
+                                        <rect key="frame" x="60" y="99.5" width="122" height="31"/>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="تایید">
@@ -388,7 +395,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBq-08-QHe">
-                                        <rect key="frame" x="60" y="139.5" width="122" height="33"/>
+                                        <rect key="frame" x="60" y="137.5" width="122" height="31"/>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="تغییر شماره تلفن">
@@ -437,10 +444,95 @@
             </objects>
             <point key="canvasLocation" x="1626" y="241"/>
         </scene>
+        <!--Side Menu Table View Controller-->
+        <scene sceneID="4AY-8t-q1J">
+            <objects>
+                <tableViewController id="XkR-Fi-Ynx" customClass="SideMenuTableViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yyO-D2-IAq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3ZO-3m-057">
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ZO-3m-057" id="7Zx-wi-s7t">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XkR-Fi-Ynx" id="41v-te-Xfj"/>
+                            <outlet property="delegate" destination="XkR-Fi-Ynx" id="ke3-U6-9La"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="tm7-BW-NGG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMr-DP-ESN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6851.25" y="240.8450704225352"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="qLC-vR-M7Q">
+            <objects>
+                <navigationController storyboardIdentifier="sidemenu" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="3JV-4K-hts" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="PfM-Pj-0Kp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q5t-ID-urs">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2LN-pd-AE8">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowPushOfSameClassTwice" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysAnimate" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="dismissOnPresent" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="dismissOnPush" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="dismissOnRotation" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="dismissWhenBackgrounded" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableSwipeToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="enableTapToDismissGesture" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="presentingViewControllerUserInteractionEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="presentingViewControllerUseSnapshot" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="statusBarEndAlpha">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="XkR-Fi-Ynx" kind="relationship" relationship="rootViewController" id="Xbn-qJ-hdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqk-XK-PN3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6018.75" y="240.8450704225352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ymc-qz-CEO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K9R-fs-jd7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xSD-oj-fDF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8vK-cn-y5c" kind="relationship" relationship="rootViewController" id="mTf-Gk-pWe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="How-51-uCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4080" y="240.8450704225352"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ShahrdariLogo" width="236" height="236"/>
         <image name="Side" width="86" height="273"/>
+        <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="headerBackground" width="375" height="600.5"/>
         <image name="homeCircle" width="94" height="94.5"/>
     </resources>

@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.0.0)
+  - SideMenu (6.4.8)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
+  - SideMenu
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SideMenu
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: fdbd480cc57af00db671036db6f48ea7207da6e8
+PODFILE CHECKSUM: 04b341812ba7f1bd3cd8f0c2997c5c8397844a8a
 
 COCOAPODS: 1.6.0.beta.1

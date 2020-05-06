@@ -8,4 +8,5 @@ target 'ShahrYar' do
   # Pods for ShahrYar
     pod 'SwiftyJSON'
     pod 'Alamofire'
+    pod 'SideMenu'
 end
