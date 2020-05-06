@@ -34,16 +34,16 @@ class HomeViewController: UIViewController {
         setCornerRedius(eghdamat)
         setCornerRedius(itCitizenOutlet)
         
-        SideMenuManager.default.rightMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
-        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
+//        SideMenuManager.default.rightMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
+//        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "sidemenu") as? SideMenuNavigationController
 
         
         
     }
     
     @IBAction func sideMenu(_ sender: Any) {
-         let menu = storyboard!.instantiateViewController(withIdentifier: "sidemenu") as! SideMenuNavigationController
-        present(menu, animated: true, completion: nil)
+//         let menu = storyboard!.instantiateViewController(withIdentifier: "sidemenu") as! SideMenuNavigationController
+//        present(menu, animated: true, completion: nil)
     }
     
     func setCornerRedius(_ button: UIButton) {
