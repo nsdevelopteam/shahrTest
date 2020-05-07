@@ -914,22 +914,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="توضیحات (توصیف مشکل، آدرس مشکل و ....)" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xPM-gt-mrP">
+                                <rect key="frame" x="0.0" y="448" width="320" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="v81-Qv-VhG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="OUH-Zm-yu0" id="Mec-S7-uds"/>
+                                </connections>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zO-vV-le4" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="448"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5be-iE-BHs">
+                                <rect key="frame" x="0.0" y="517" width="320" height="51"/>
+                                <color key="backgroundColor" red="0.40167686339999997" green="0.57527059319999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
+                                <state key="normal" title="ارسال">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendData:" destination="OUH-Zm-yu0" eventType="touchUpInside" id="eRg-P3-Zts"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="9zO-vV-le4" firstAttribute="top" secondItem="PPx-Qz-Wr0" secondAttribute="top" id="61O-yH-yXE"/>
-                            <constraint firstItem="9zO-vV-le4" firstAttribute="leading" secondItem="PPx-Qz-Wr0" secondAttribute="leading" id="O7g-iy-5Vn"/>
-                            <constraint firstItem="9zO-vV-le4" firstAttribute="bottom" secondItem="PPx-Qz-Wr0" secondAttribute="bottom" id="ePL-XL-b3B"/>
-                            <constraint firstItem="9zO-vV-le4" firstAttribute="trailing" secondItem="PPx-Qz-Wr0" secondAttribute="trailing" id="emZ-LX-8uX"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="top" secondItem="PPx-Qz-Wr0" secondAttribute="top" id="4Ug-9l-LCQ"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="leading" secondItem="PPx-Qz-Wr0" secondAttribute="leading" id="ErX-yT-gB6"/>
+                            <constraint firstItem="5be-iE-BHs" firstAttribute="trailing" secondItem="PPx-Qz-Wr0" secondAttribute="trailing" id="N1y-hz-YEp"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="trailing" secondItem="PPx-Qz-Wr0" secondAttribute="trailing" id="VfL-yn-a1v"/>
+                            <constraint firstItem="PPx-Qz-Wr0" firstAttribute="bottom" secondItem="9zO-vV-le4" secondAttribute="bottom" constant="120" id="Y3w-df-Pbj"/>
+                            <constraint firstItem="PPx-Qz-Wr0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xPM-gt-mrP" secondAttribute="trailing" symbolic="YES" id="Y5N-0H-LFl"/>
+                            <constraint firstItem="5be-iE-BHs" firstAttribute="top" secondItem="xPM-gt-mrP" secondAttribute="bottom" id="efR-qm-3D3"/>
+                            <constraint firstItem="xPM-gt-mrP" firstAttribute="top" secondItem="9zO-vV-le4" secondAttribute="bottom" id="k2y-zt-NhN"/>
+                            <constraint firstAttribute="bottom" secondItem="5be-iE-BHs" secondAttribute="bottom" id="kVr-2I-772"/>
+                            <constraint firstItem="5be-iE-BHs" firstAttribute="leading" secondItem="PPx-Qz-Wr0" secondAttribute="leading" id="p6Z-6W-uCC"/>
+                            <constraint firstItem="xPM-gt-mrP" firstAttribute="trailing" secondItem="PPx-Qz-Wr0" secondAttribute="trailing" id="ree-CZ-u23"/>
+                            <constraint firstItem="xPM-gt-mrP" firstAttribute="leading" secondItem="PPx-Qz-Wr0" secondAttribute="leading" id="wdd-Qb-fnE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PPx-Qz-Wr0"/>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="9zO-vV-le4" id="mHk-Fl-ZAh"/>
+                        <outlet property="textField" destination="xPM-gt-mrP" id="Vwf-n6-UJ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWt-nm-2So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
