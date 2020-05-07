@@ -20,6 +20,7 @@ class VerifyViewController: UIViewController {
     let defaults = UserDefaults.standard
     var isUserRegisterdBefore = false
     var api_token = ""
+    var Username = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,6 @@ class VerifyViewController: UIViewController {
         var parameters = ["mobile": "", "code": ""]
         
         parameters["mobile"] = defaults.string(forKey: "Number")
-//        parameters["mobile"] = "09904863541"
         parameters["code"] = smsTextField.text
         AF.request(submitCodeURL,
                    method: .post,
@@ -41,18 +41,17 @@ class VerifyViewController: UIViewController {
                         let result = JSON(responseData.value!)
                         print(result)
                         print(result["api_token"])
+                        print(result["profile"]["name"])
                         self.api_token = result["api_token"].stringValue
+                        self.Username = result["profile"]["name"].stringValue
                         if result["profile"] == JSON.null {
-                            print("false")
                             self.isUserRegisterdBefore = false
                         } else {
-                            print("true")
                             self.isUserRegisterdBefore = true
                         }
                     }
         }
             self.defaults.set(api_token, forKey: "api_token")
-
     }
     
     func checkUser() {
