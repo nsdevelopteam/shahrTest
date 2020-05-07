@@ -20,7 +20,7 @@ class VerifyViewController: UIViewController {
     let defaults = UserDefaults.standard
     var isUserRegisterdBefore = false
     var api_token = ""
-    var Username = ""
+//    var Username = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +41,9 @@ class VerifyViewController: UIViewController {
                         let result = JSON(responseData.value!)
                         print(result)
                         print(result["api_token"])
-                        print(result["profile"]["name"])
+                        print(result["profile"]["name"].stringValue)
                         self.api_token = result["api_token"].stringValue
-                        self.Username = result["profile"]["name"].stringValue
+                        self.defaults.set(result["profile"]["name"].stringValue, forKey: "Name")
                         if result["profile"] == JSON.null {
                             self.isUserRegisterdBefore = false
                         } else {

@@ -12,10 +12,15 @@ class SideMenuTableViewController: UITableViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
-    
+    let defaults = UserDefaults.standard
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nameLabel.text = defaults.string(forKey: "Name")
+        phoneNumberLabel.text = defaults.string(forKey: "Number")
+        
+        
     }
     
     @IBAction func profileButton(_ sender: Any) {
