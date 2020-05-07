@@ -929,7 +929,7 @@
                         <viewLayoutGuide key="safeArea" id="PPx-Qz-Wr0"/>
                     </view>
                     <connections>
-                        <outlet property="google_map" destination="9zO-vV-le4" id="DFT-ic-T1I"/>
+                        <outlet property="mapView" destination="9zO-vV-le4" id="mHk-Fl-ZAh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWt-nm-2So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

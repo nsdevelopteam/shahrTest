@@ -9,47 +9,41 @@
 import UIKit
 import GoogleMaps
 
-class MapViewController: UIViewController, GMSMapViewDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var google_map: GMSMapView!
+    @IBOutlet weak var mapView: GMSMapView!
     
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self as? CLLocationManagerDelegate
+    
+            initializeTheLocationManager()
+            self.mapView.isMyLocationEnabled = true
+        
+
+        }
+    
+        func initializeTheLocationManager() {
+        locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
-        google_map.delegate = self
+        locationManager.startUpdatingLocation()
     }
 
-    
-    func show_marker(posotion: CLLocationCoordinate2D) {
-        let marker = GMSMarker()
-        marker.position = posotion
-        marker.title = "hi"
-        marker.snippet = "cadaw"
-        marker.map = google_map
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+        let location = locationManager.location?.coordinate
+
+        cameraMoveToLocation(toLocation: location)
+
     }
-    
-}
 
-extension MapViewController: CLLocationManagerDelegate {
-
-    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.startUpdatingLocation()
-
-            google_map.isMyLocationEnabled = true
-            google_map.settings.myLocationButton = true
+    func cameraMoveToLocation(toLocation: CLLocationCoordinate2D?) {
+        if toLocation != nil {
+            mapView.camera = GMSCameraPosition.camera(withTarget: toLocation!, zoom: 15)
         }
     }
 
-    private func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            google_map.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
 
-            locationManager.stopUpdatingLocation()
-
-        }
-    }
 }
+    
