@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>این اپلیکیشن به موقعیت شما نیاز دارد</string>
 	<key>NSCameraUsageDescription</key>
 	<string>این اپلیکیشن برای گرفتن عکس نیاز به اجازه دارد</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -9,4 +9,5 @@ target 'ShahrYar' do
     pod 'SwiftyJSON'
     pod 'Alamofire'
     pod 'SideMenu'
+    pod 'GoogleMaps'
 end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRq-IK-dou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUH-Zm-yu0">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -906,20 +906,35 @@
             </objects>
             <point key="canvasLocation" x="1625.625" y="976.05633802816908"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="mke-Ug-4c2">
             <objects>
-                <viewController id="OUH-Zm-yu0" sceneMemberID="viewController">
+                <viewController id="OUH-Zm-yu0" customClass="MapViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xtB-vV-WYr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9zO-vV-le4" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="top" secondItem="PPx-Qz-Wr0" secondAttribute="top" id="61O-yH-yXE"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="leading" secondItem="PPx-Qz-Wr0" secondAttribute="leading" id="O7g-iy-5Vn"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="bottom" secondItem="PPx-Qz-Wr0" secondAttribute="bottom" id="ePL-XL-b3B"/>
+                            <constraint firstItem="9zO-vV-le4" firstAttribute="trailing" secondItem="PPx-Qz-Wr0" secondAttribute="trailing" id="emZ-LX-8uX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PPx-Qz-Wr0"/>
                     </view>
+                    <connections>
+                        <outlet property="google_map" destination="9zO-vV-le4" id="DFT-ic-T1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWt-nm-2So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2581" y="1380"/>
+            <point key="canvasLocation" x="2580" y="1379.5774647887324"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="qLC-vR-M7Q">

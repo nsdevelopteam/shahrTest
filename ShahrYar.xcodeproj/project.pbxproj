@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D2DCBDECE1BF57DA3C570BC /* Pods_ShahrYar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F52F7CE4F41B71F81DD0ECA /* Pods_ShahrYar.framework */; };
 		3C12305C2464209100D190EE /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C12305B2464209100D190EE /* SideMenuTableViewController.swift */; };
+		3C52D4CD246453E0005E490F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52D4CC246453E0005E490F /* MapViewController.swift */; };
 		D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8B2460795900C29983 /* AppDelegate.swift */; };
 		D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8D2460795900C29983 /* SceneDelegate.swift */; };
 		D304EB932460795900C29983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB912460795900C29983 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		056A12B70D380C73BA6E1FDE /* Pods-ShahrYar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahrYar.release.xcconfig"; path = "Target Support Files/Pods-ShahrYar/Pods-ShahrYar.release.xcconfig"; sourceTree = "<group>"; };
 		2AA6CF8DA48320AB4FB1F6A8 /* Pods-ShahrYar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahrYar.debug.xcconfig"; path = "Target Support Files/Pods-ShahrYar/Pods-ShahrYar.debug.xcconfig"; sourceTree = "<group>"; };
 		3C12305B2464209100D190EE /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		3C52D4CC246453E0005E490F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8F52F7CE4F41B71F81DD0ECA /* Pods_ShahrYar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahrYar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304EB882460795900C29983 /* ShahrYar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShahrYar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304EB8B2460795900C29983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D304EB912460795900C29983 /* Main.storyboard */,
+				3C52D4CC246453E0005E490F /* MapViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				D304EB852460795900C29983 /* Frameworks */,
 				D304EB862460795900C29983 /* Resources */,
 				B3BD52897DF9F10FB67D682E /* [CP] Embed Pods Frameworks */,
+				BA948DD7E210BD1F814C8A32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,6 +357,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShahrYar/Pods-ShahrYar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BA948DD7E210BD1F814C8A32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShahrYar/Pods-ShahrYar-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShahrYar/Pods-ShahrYar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -364,6 +390,7 @@
 				D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */,
 				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
 				D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */,
+				3C52D4CD246453E0005E490F /* MapViewController.swift in Sources */,
 				D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */,
 				D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */,
 				D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */,
@@ -514,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 17;
-				DEVELOPMENT_TEAM = LA66LW5978;
+				DEVELOPMENT_TEAM = 3W398LB97N;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -535,7 +562,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 17;
-				DEVELOPMENT_TEAM = LA66LW5978;
+				DEVELOPMENT_TEAM = 3W398LB97N;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

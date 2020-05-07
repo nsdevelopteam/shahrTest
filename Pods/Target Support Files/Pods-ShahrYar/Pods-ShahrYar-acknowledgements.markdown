@@ -24,6 +24,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## GoogleMaps
+
+Copyright 2020 Google
+
 ## SideMenu
 
 Copyright (c) 2015 Jonathan Kent <contact@jonkent.me>
