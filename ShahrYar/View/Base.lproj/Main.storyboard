@@ -166,36 +166,9 @@
                                     <constraint firstAttribute="height" constant="140" id="xo1-9z-OmH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-bd-stN">
-                                <rect key="frame" x="16" y="307" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXg-0t-Uof">
-                                        <rect key="frame" x="6" y="7" width="82" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="پارکینگ یاب">
-                                                    <attributes>
-                                                        <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </state>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="R9H-Gf-YKK">
-                                        <rect key="frame" x="1" y="0.0" width="90" height="91"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYQ-9v-xIl">
                                 <rect key="frame" x="115" y="307" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="pdz-25-bPv">
                                         <rect key="frame" x="0.0" y="-1" width="91" height="92"/>
@@ -222,7 +195,7 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPR-Nd-mmV">
                                 <rect key="frame" x="213" y="307" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="BwK-pC-lez">
                                         <rect key="frame" x="0.0" y="0.0" width="91" height="92"/>
@@ -249,7 +222,7 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66X-Lg-gYy">
                                 <rect key="frame" x="16" y="413" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="kue-Fd-tD2">
                                         <rect key="frame" x="0.0" y="0.0" width="92" height="91"/>
@@ -276,15 +249,15 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-sF-AsB">
                                 <rect key="frame" x="115" y="413" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="PPa-RM-O3g">
                                         <rect key="frame" x="3" y="2" width="90" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GoJ-pG-tGk">
                                         <rect key="frame" x="6" y="6" width="80" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -303,15 +276,15 @@
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qjM-tZ-8co">
                                 <rect key="frame" x="213" y="413" width="91" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="wqU-Jz-RX5">
                                         <rect key="frame" x="1" y="2" width="90" height="89"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lvx-n6-JMa">
                                         <rect key="frame" x="6" y="7" width="80" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -325,6 +298,33 @@
                                             </attributedString>
                                         </state>
                                     </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1eT-bd-stN">
+                                <rect key="frame" x="16" y="307" width="91" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXg-0t-Uof">
+                                        <rect key="frame" x="6" y="7" width="82" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="پارکینگ یاب">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.1803921568627451" green="0.40784313725490196" blue="0.0078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="IRANSansMobile-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homeCircle" translatesAutoresizingMaskIntoConstraints="NO" id="R9H-Gf-YKK">
+                                        <rect key="frame" x="2" y="2" width="90" height="91"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -678,10 +678,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-Fb-pcK">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epU-MR-KkC">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="پروفایل">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -690,8 +690,8 @@
                                                                 <action selector="profileButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="bMf-nS-0kU"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="82b-Dz-DtP">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="82b-Dz-DtP">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -715,10 +715,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7s8-Kz-jCF">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-BB-vEj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-BB-vEj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="اشتراک گذاری">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -727,8 +727,8 @@
                                                                 <action selector="shareButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="xAl-Rd-81a"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-Lh-EfG">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-Lh-EfG">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -752,10 +752,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ck2-ey-SxK">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qz-GH-bnG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qz-GH-bnG">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="آرشیو ارسال مشکل ها">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -764,8 +764,8 @@
                                                                 <action selector="ArchiveButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="2RS-GP-kkc"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-zF-gAa">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="Xqb-zF-gAa">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -789,10 +789,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I1Y-D1-1ky">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quf-Dp-fQ9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Quf-Dp-fQ9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="اقدامات انجام شده">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -801,8 +801,8 @@
                                                                 <action selector="completeButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="WGk-K4-vvx"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="r1g-vY-Pfh">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="r1g-vY-Pfh">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -826,10 +826,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qd0-Xs-v82">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKi-Fk-vTf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKi-Fk-vTf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="شماره های ضروری">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -838,8 +838,8 @@
                                                                 <action selector="emergencyNumbersButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="HHP-Qr-J1T"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qzw-HT-Jo7">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="qzw-HT-Jo7">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -863,10 +863,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KeO-jk-yz6">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQm-lA-0wO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQm-lA-0wO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="آموزش و راهنما">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -875,8 +875,8 @@
                                                                 <action selector="learnAndGuidButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="TW3-7A-qBv"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xFq-D7-TlL">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="xFq-D7-TlL">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -900,10 +900,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Et1-HL-U3Z">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bi9-GO-nzd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="پشتیبانی">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -912,8 +912,8 @@
                                                                 <action selector="supportButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="IMn-kt-EG7"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ik1-uu-XYF">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="Ik1-uu-XYF">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -937,10 +937,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PJi-y2-DZk">
-                                                    <rect key="frame" x="100" y="5.5" width="200" height="34"/>
+                                                    <rect key="frame" x="100" y="-41.5" width="200" height="128"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-ov-qvh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="34"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="78" height="128"/>
                                                             <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                             <state key="normal" title="خروجی">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -949,8 +949,8 @@
                                                                 <action selector="exitButton:" destination="XkR-Fi-Ynx" eventType="touchUpInside" id="6AD-bU-kfc"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RAt-dO-enT">
-                                                            <rect key="frame" x="182.5" y="0.0" width="17.5" height="34"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:82b-Dz-DtP:image" translatesAutoresizingMaskIntoConstraints="NO" id="RAt-dO-enT">
+                                                            <rect key="frame" x="88" y="0.0" width="112" height="128"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                     </subviews>
@@ -1239,7 +1239,7 @@
         <image name="Side" width="86" height="273"/>
         <image name="headerBackground" width="375" height="600.5"/>
         <image name="homeCircle" width="94" height="94.5"/>
-        <image name="imageView:82b-Dz-DtP:image" catalog="system" width="112" height="128">
+        <image name="imageView:82b-Dz-DtP:image" width="112" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKisyNThCSktPUlUkbnVsbNcNDg8QERITFBUW
