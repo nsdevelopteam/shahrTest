@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fWY-hd-7t9">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -7,91 +7,35 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="IRANSansMobile_Bold.ttf">
-            <string>IRANSansMobile-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="gGa-Lr-M3I">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                <viewController id="fWY-hd-7t9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dv1-I0-juU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="yId-Gc-UYW">
-                                <rect key="frame" x="0.0" y="0.0" width="92" height="270"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="YPa-tw-F62"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-1m-Vkt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="CI7-2V-mSz">
                                 <rect key="frame" x="228" y="0.0" width="92" height="270"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="pXi-nm-j6g"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShahrdariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="th6-Wm-EXs">
-                                <rect key="frame" x="110" y="84" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="1tI-WP-gqb"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="qht-UD-oeP">
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="4eb-0H-8B2">
-                                <rect key="frame" x="88" y="192" width="144" height="112"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهرداری گرگان" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K3A-Ew-bRq">
-                                        <rect key="frame" x="0.0" y="0.0" width="144" height="23"/>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="253" horizontalCompressionResistancePriority="753" verticalCompressionResistancePriority="753" text="ارسال مشکلات شهری" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-74-9Bi">
-                                        <rect key="frame" x="0.0" y="46" width="144" height="21.5"/>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهر - یار" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq8-Bo-4Px">
-                                        <rect key="frame" x="0.0" y="90.5" width="144" height="21.5"/>
-                                        <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه ۱.۰.۰" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKK-rd-Ol7">
-                                <rect key="frame" x="100" y="482.5" width="120" height="21.5"/>
-                                <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShahrdariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="4h6-ZF-48e">
+                                <rect key="frame" x="110" y="170" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.28235294117647058" green="0.47058823529411764" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="yId-Gc-UYW" firstAttribute="top" secondItem="bc2-1m-Vkt" secondAttribute="top" id="Is4-FP-0Zx"/>
-                            <constraint firstItem="bc2-1m-Vkt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PUl-98-drM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eKK-rd-Ol7" secondAttribute="bottom" constant="64" id="TTS-bx-Vxq"/>
-                            <constraint firstItem="th6-Wm-EXs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U97-Oo-wdQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yId-Gc-UYW" secondAttribute="bottom" constant="298" id="WzJ-t2-5GF"/>
-                            <constraint firstItem="eKK-rd-Ol7" firstAttribute="centerX" secondItem="4eb-0H-8B2" secondAttribute="centerX" id="Xb0-C1-u29"/>
-                            <constraint firstItem="yId-Gc-UYW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cGw-L1-pNV"/>
-                            <constraint firstItem="4eb-0H-8B2" firstAttribute="top" secondItem="th6-Wm-EXs" secondAttribute="bottom" constant="8" id="dmJ-eQ-Pkb"/>
-                            <constraint firstItem="th6-Wm-EXs" firstAttribute="leading" secondItem="yId-Gc-UYW" secondAttribute="trailing" constant="18" id="fH3-6I-6tN"/>
-                            <constraint firstItem="yId-Gc-UYW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ffF-Um-9be"/>
-                            <constraint firstItem="eKK-rd-Ol7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="p2Q-51-1ja"/>
-                            <constraint firstItem="th6-Wm-EXs" firstAttribute="centerX" secondItem="4eb-0H-8B2" secondAttribute="centerX" id="vRm-df-bBz"/>
-                            <constraint firstItem="yId-Gc-UYW" firstAttribute="bottom" secondItem="bc2-1m-Vkt" secondAttribute="bottom" id="y1i-2R-thN"/>
-                            <constraint firstItem="th6-Wm-EXs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="zTz-Tg-sPR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="hLx-Jc-VIL"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LKJ-JN-64p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.5" y="375"/>
+            <point key="canvasLocation" x="786" y="375"/>
         </scene>
     </scenes>
     <resources>

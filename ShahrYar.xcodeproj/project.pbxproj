@@ -27,6 +27,7 @@
 		D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553E02461A1F5006D9D88 /* HomeViewController.swift */; };
 		D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553E32461AF97006D9D88 /* IntroViewController.swift */; };
 		D3CE347824657A9D0083DA6B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */; };
+		D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347924658A4F0083DA6B /* RegisterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D35553E02461A1F5006D9D88 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		D35553E32461AF97006D9D88 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		D3CE347924658A4F0083DA6B /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D35553CD2461578E006D9D88 /* RegisterViewController.swift */,
+				D3CE347924658A4F0083DA6B /* RegisterCell.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */,
 				D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */,
 				D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */,
 				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
@@ -552,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -573,7 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

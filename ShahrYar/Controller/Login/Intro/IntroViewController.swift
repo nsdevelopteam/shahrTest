@@ -38,9 +38,6 @@ class IntroViewController: UIViewController {
     @IBAction func sendSMS(_ sender: UIButton) {
         showWaiting()
         sendSMSRequest()
-        
-        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "verifyVc") as? VerifyViewController else { return }
-        self.navigationController?.pushViewController(verifyVc, animated: true)
     }
     
     

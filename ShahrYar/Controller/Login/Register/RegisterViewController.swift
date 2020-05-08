@@ -10,10 +10,17 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    @IBOutlet weak var registerTableView: UITableView!
+    
     let sectionTitles = ["نام و نام خانوادگی", "تاریخ تولد", "جنسیت", "استان", "شهر"]
     
-    let textField = UITextField()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        registerTableView.tableHeaderView = UIView()
 
+        
+    }
 }
 
 
@@ -28,14 +35,18 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let registerCell = tableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath)
+        let registerCell = tableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath) as! RegisterCell
         
-        registerCell.accessoryView = textField
+        
         
         return registerCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionTitles[section]
     }
 }
