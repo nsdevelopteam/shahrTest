@@ -124,19 +124,21 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func sideMenu(_ sender: Any) {
     }
     @IBAction func sendProblemButton(_ sender: Any) {
-        
-        let photos = PHPhotoLibrary.authorizationStatus()
-        if photos == .notDetermined {
-            PHPhotoLibrary.requestAuthorization({status in
-                if status == .authorized{
-                    print("OKAY")
-                } else {
-                    print("NOTOKAY")
-                }
-            })
-        }
-        checkLibrary()
-        checkPermission()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
+        present(vc, animated: true, completion: nil)
+//        let photos = PHPhotoLibrary.authorizationStatus()
+//        if photos == .notDetermined {
+//            PHPhotoLibrary.requestAuthorization({status in
+//                if status == .authorized{
+//                    print("OKAY")
+//                } else {
+//                    print("NOTOKAY")
+//                }
+//            })
+//        }
+//        checkLibrary()
+//        checkPermission()
         
     }
     

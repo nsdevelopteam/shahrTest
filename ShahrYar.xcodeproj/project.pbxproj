@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D2DCBDECE1BF57DA3C570BC /* Pods_ShahrYar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F52F7CE4F41B71F81DD0ECA /* Pods_ShahrYar.framework */; };
-		3C12305C2464209100D190EE /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C12305B2464209100D190EE /* SideMenuTableViewController.swift */; };
 		3C52D4CD246453E0005E490F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C52D4CC246453E0005E490F /* MapViewController.swift */; };
 		D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8B2460795900C29983 /* AppDelegate.swift */; };
 		D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D304EB8D2460795900C29983 /* SceneDelegate.swift */; };
@@ -28,12 +27,13 @@
 		D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553E32461AF97006D9D88 /* IntroViewController.swift */; };
 		D3CE347824657A9D0083DA6B /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */; };
 		D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347924658A4F0083DA6B /* RegisterCell.swift */; };
+		D3CE347D2465AA7C0083DA6B /* ProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347C2465AA7C0083DA6B /* ProblemsViewController.swift */; };
+		D3CE347F2465AB750083DA6B /* ProblemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347E2465AB750083DA6B /* ProblemsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		056A12B70D380C73BA6E1FDE /* Pods-ShahrYar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahrYar.release.xcconfig"; path = "Target Support Files/Pods-ShahrYar/Pods-ShahrYar.release.xcconfig"; sourceTree = "<group>"; };
 		2AA6CF8DA48320AB4FB1F6A8 /* Pods-ShahrYar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShahrYar.debug.xcconfig"; path = "Target Support Files/Pods-ShahrYar/Pods-ShahrYar.debug.xcconfig"; sourceTree = "<group>"; };
-		3C12305B2464209100D190EE /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		3C52D4CC246453E0005E490F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8F52F7CE4F41B71F81DD0ECA /* Pods_ShahrYar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShahrYar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D304EB882460795900C29983 /* ShahrYar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShahrYar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +56,8 @@
 		D35553E32461AF97006D9D88 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		D3CE347924658A4F0083DA6B /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
+		D3CE347C2465AA7C0083DA6B /* ProblemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsViewController.swift; sourceTree = "<group>"; };
+		D3CE347E2465AB750083DA6B /* ProblemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */,
-				3C12305B2464209100D190EE /* SideMenuTableViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -132,6 +133,7 @@
 		D35553C5246155F0006D9D88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D3CE347B2465AA4C0083DA6B /* Problems */,
 				D3CE3476246575810083DA6B /* Map */,
 				D35553DF2461A1E4006D9D88 /* Home */,
 				D35553C8246156EC006D9D88 /* Login */,
@@ -235,6 +237,15 @@
 				3C52D4CC246453E0005E490F /* MapViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		D3CE347B2465AA4C0083DA6B /* Problems */ = {
+			isa = PBXGroup;
+			children = (
+				D3CE347C2465AA7C0083DA6B /* ProblemsViewController.swift */,
+				D3CE347E2465AB750083DA6B /* ProblemsCell.swift */,
+			);
+			path = Problems;
 			sourceTree = "<group>";
 		};
 		F42E26E6EBB9495614466C60 /* Frameworks */ = {
@@ -401,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */,
+				D3CE347F2465AB750083DA6B /* ProblemsCell.swift in Sources */,
 				D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */,
 				D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */,
 				D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */,
@@ -410,7 +422,7 @@
 				D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */,
 				D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */,
 				D3CE347824657A9D0083DA6B /* SideMenuViewController.swift in Sources */,
-				3C12305C2464209100D190EE /* SideMenuTableViewController.swift in Sources */,
+				D3CE347D2465AA7C0083DA6B /* ProblemsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -577,7 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 40;
 				DEVELOPMENT_TEAM = LA66LW5978;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

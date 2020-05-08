@@ -26,11 +26,13 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Description</string>
+	<string>Do you allow this app to know your current location?</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Will you allow this app to always know your location?</string>
+	<string>Do you allow this app to know your current location?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Do you allow this app to know your current location?</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Do you allow this app to use your Photo Library?</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>IRANSansMobile.ttf</string>
