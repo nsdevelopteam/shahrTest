@@ -31,9 +31,9 @@ class VerifyViewController: UIViewController {
     func submitVerficationCode() {
         
         var parameters = ["mobile": "", "code": ""]
-        
+        let smsCode = smsTextField.text
         parameters["mobile"] = defaults.string(forKey: "Number")
-        parameters["code"] = smsTextField.text
+        parameters["code"] = smsCode?.transformNumbersToEng()
         AF.request(submitCodeURL,
                    method: .post,
                    parameters: parameters).responseJSON { (responseData) -> Void in
@@ -41,13 +41,13 @@ class VerifyViewController: UIViewController {
                         let result = JSON(responseData.value!)
                         print(result)
                         print(result["api_token"])
-                        print(result["profile"]["name"].stringValue)
                         self.api_token = result["api_token"].stringValue
-                        self.defaults.set(result["profile"]["name"].stringValue, forKey: "Name")
                         if result["profile"] == JSON.null {
                             self.isUserRegisterdBefore = false
                         } else {
                             self.isUserRegisterdBefore = true
+                            print(result["profile"]["name"].stringValue)
+                            self.defaults.set(result["profile"]["name"].stringValue, forKey: "Name")
                         }
                     }
         }
@@ -61,16 +61,16 @@ class VerifyViewController: UIViewController {
             vc.modalPresentationStyle = .overFullScreen
             present(vc, animated: true, completion: nil)
         } else {
-            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true, completion: nil)
         }
     }
     
     @IBAction func submitButton(_ sender: Any) {
         submitVerficationCode()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true, completion: nil)
+        checkUser()
     }
     
     @IBAction func ChangePhoneNumberButton(_ sender: Any) {

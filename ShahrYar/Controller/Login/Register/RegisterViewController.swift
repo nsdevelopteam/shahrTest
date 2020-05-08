@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class RegisterViewController: UIViewController {
     
     @IBOutlet weak var registerTableView: UITableView!
     @IBOutlet var photoHeader: UIView!
     @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
+    let defaults = UserDefaults.standard
+
+    let setProfileURL = "http://moshkelateshahri.xyz/api/setProfile"
     
     let sectionTitles = ["نام و نام خانوادگی", "تاریخ تولد", "جنسیت", "استان", "شهر"]
     
@@ -25,9 +30,41 @@ class RegisterViewController: UIViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansMobile-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         rightButtonOutlet.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "IRANSansMobile", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
     }
-    
+//
+//    func sendDate() {
+//        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
+//        parameters["api_token"] = defaults.string(forKey: "api_token")
+//        parameters["name"] =
+//        parameters["image"] =
+//        parameters["province"] =
+//        parameters["city"] =
+//        parameters["sex"] =
+//        parameters["birthday_day"] =
+//        parameters["birthday_month"] =
+//        parameters["birthday_year"] =
+//
+//        AF.request(setProfileURL,
+//                   method: .post,
+//                   parameters: parameters).responseJSON { (responseData) -> Void in
+//                    if((responseData.value) != nil) {
+//                        let result = JSON(responseData.value!)
+//                        print(result)
+////                        self.hideWaiting()
+//                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
+//                        self.navigationController?.pushViewController(verifyVc, animated: true)
+//                    } else {
+////                        self.hideWaiting()
+//            }
+//        }
+//    }
+//
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func submitButton(_ sender: Any) {
+        print("Submit button Pressed BITCH")
+        
+        
     }
     
 }

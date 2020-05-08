@@ -43,8 +43,9 @@ class IntroViewController: UIViewController {
     
     func sendSMSRequest() {
         var parameters = ["mobile": ""]
-        parameters["mobile"] = numberField.text
-        defaults.set(numberField.text, forKey: "Number")
+        let number = numberField.text
+        parameters["mobile"] = number?.transformNumbersToEng()
+        defaults.set(number?.transformNumbersToEng(), forKey: "Number")
         
         AF.request(verifyURL,
                    method: .post,
@@ -57,7 +58,7 @@ class IntroViewController: UIViewController {
                         self.navigationController?.pushViewController(verifyVc, animated: true)
                     } else {
                         self.hideWaiting()
-                    }
+            }
         }
     }
 }
