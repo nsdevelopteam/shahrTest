@@ -55,17 +55,20 @@ class VerifyViewController: UIViewController {
     }
     
     func checkUser() {
-        if isUserRegisterdBefore {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
-            vc.modalPresentationStyle = .overFullScreen
-            present(vc, animated: true, completion: nil)
-        } else {
+//        if isUserRegisterdBefore {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
+//            vc.modalPresentationStyle = .overFullScreen
+//            present(vc, animated: true, completion: nil)
+//        } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
             vc.modalPresentationStyle = .overFullScreen
             present(vc, animated: true, completion: nil)
-        }
+//        }
+//        defaults.set(true, forKey: "isLoggedIn")
+//        defaults.synchronize()
+
     }
     
     @IBAction func submitButton(_ sender: Any) {

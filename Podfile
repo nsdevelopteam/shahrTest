@@ -10,4 +10,5 @@ target 'ShahrYar' do
     pod 'Alamofire'
     pod 'SideMenu'
     pod 'GoogleMaps'
+    pod 'iOSDropDown'
 end

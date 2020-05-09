@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import iOSDropDown
 
 class RegisterCell: UITableViewCell {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var dropDownMenu: DropDown!
     
     override func awakeFromNib() {
         super.awakeFromNib()

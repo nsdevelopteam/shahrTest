@@ -5,12 +5,14 @@ PODS:
   - GoogleMaps/Base (3.8.0)
   - GoogleMaps/Maps (3.8.0):
     - GoogleMaps/Base
+  - iOSDropDown (0.3.4)
   - SideMenu (6.4.8)
   - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
+  - iOSDropDown
   - SideMenu
   - SwiftyJSON
 
@@ -18,15 +20,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - GoogleMaps
+    - iOSDropDown
     - SideMenu
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
   GoogleMaps: 7c8d66d70e4e8c300f43a7219d8fdaad7b325a9a
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: d770830e7dc20a6007559c1651671336c79a0a6a
+PODFILE CHECKSUM: 4f2631438514040cabcf53499fcd56584f374125
 
 COCOAPODS: 1.6.0.beta.1

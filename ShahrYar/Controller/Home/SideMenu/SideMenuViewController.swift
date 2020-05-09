@@ -10,14 +10,20 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
 
+    let defaults = UserDefaults.standard
     @IBOutlet weak var sideMenuTableView: UITableView!
     @IBOutlet var headerView: UIView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     
     let sideMenusOptions = ["● پروفایل", "● اشتراک گذاری", "● آرشیو ارسال مشکل‌ها", "● اقدامات انجام شده", "● شماره های ضروری", "● آموزش و راهنما", "● پشتیبانی", "● خروجی"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nameLabel.text = defaults.string(forKey: "Name")
+        phoneNumberLabel.text = defaults.string(forKey: "Number")
+
         sideMenuTableView.tableHeaderView = headerView
         sideMenuTableView.tableFooterView = UIView()
         sideMenuTableView.separatorColor = .clear
