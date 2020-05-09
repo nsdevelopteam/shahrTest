@@ -8,11 +8,13 @@
 
 import UIKit
 import GoogleMaps
+import Alamofire
+import SwiftyJSON
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
-    
+    let appURL = "http://moshkelateshahri.xyz/api/app/"
     var locationManager = CLLocationManager()
     @IBOutlet weak var textField: UITextField!
     let defaults = UserDefaults.standard
@@ -28,6 +30,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             textField.delegate = self
 
             self.hideKeyboardWhenTappedAround()
+        
+        let locationcoordinate = getLocation()
+        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74"
+
+        sendLocationAndData(api_token: testToken, lat: locationcoordinate[0], lng: locationcoordinate[1], type_id: "1", description: "test description")
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -76,8 +83,26 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
 
     }
 
+    func sendLocationAndData(api_token: String, lat: String, lng: String, type_id: String, description: String) {
+        
+        let parameters = ["api_token": api_token, "name": lat, "province": lng, "type_id": type_id, "description": description]
+
+        AF.request(appURL,
+                   method: .post,
+                   parameters: parameters).responseJSON { (responseData) -> Void in
+                    if((responseData.value) != nil) {
+                        let result = JSON(responseData.value!)
+                        print(result)
+//                        self.hideWaiting()
+                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
+                        self.navigationController?.pushViewController(verifyVc, animated: true)
+                    } else {
+//                        self.hideWaiting()
+            }
+        }
+    }
     
-    @IBAction func sendData(_ sender: Any) {
+    func getLocation() -> [String] {
         let latitude = mapView.camera.target.latitude
         let longitude = mapView.camera.target.longitude
         print(latitude)
@@ -89,12 +114,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             
             print("Yeaeeeeejjjhhhh nill ")
         }
-//        else {
-//
-//            print("not nilll ")
-//        }
-//        print(defaults.string(forKey: "lat"))
-//        print(defaults.string(forKey: "long"))
+        
+        return [String(latitude),String(longitude)]
+    }
+    
+    @IBAction func sendData(_ sender: Any) {
+        
+
+        print("clickeddddd")
+        
     }
     
     func cameraMoveToLocation(toLocation: CLLocationCoordinate2D?) {
