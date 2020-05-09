@@ -11,9 +11,14 @@ import iOSDropDown
 
 class RegisterCell: UITableViewCell {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var dropDownMenu: DropDown!
-    
+    @IBOutlet weak var dropDownProvince: DropDown!
+    @IBOutlet weak var dropDownCity: DropDown!
+    @IBOutlet weak var dropDownSex: DropDown!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dayTextField: UITextField!
+    @IBOutlet weak var monthTextField: UITextField!
+    @IBOutlet weak var yearTextField: UITextField!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
