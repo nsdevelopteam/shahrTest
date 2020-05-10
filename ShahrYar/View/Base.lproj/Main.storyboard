@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OUH-Zm-yu0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8RE-yU-uOP">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="P4O-Na-7I8">
-                                <rect key="frame" x="39" y="236" width="242" height="132.5"/>
+                                <rect key="frame" x="39" y="236" width="242" height="130.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهرداری گرگان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sy-fa-IdB">
                                         <rect key="frame" x="50" y="0.0" width="142" height="25.5"/>
@@ -67,7 +67,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-Ie-5Q9">
-                                        <rect key="frame" x="60" y="99.5" width="122" height="33"/>
+                                        <rect key="frame" x="60" y="99.5" width="122" height="31"/>
                                         <color key="backgroundColor" red="0.2196078431372549" green="0.36470588235294116" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="ارسال کد تایید">
@@ -379,8 +379,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-sz-Uc7" userLabel="nameTextField">
-                                                    <rect key="frame" x="47" y="0.0" width="207" height="60"/>
+                                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-sz-Uc7" userLabel="nameTextField">
+                                                    <rect key="frame" x="112" y="-1" width="208" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.40167686339999997" green="0.57527059319999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -390,9 +390,10 @@
                                                         <outlet property="delegate" destination="clN-eD-0yO" id="kiO-9R-uMj"/>
                                                     </connections>
                                                 </textField>
-                                                <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-8h-uZy" userLabel="dayTextField">
-                                                    <rect key="frame" x="160" y="-1" width="158" height="61"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-8h-uZy" userLabel="dayTextField">
+                                                    <rect key="frame" x="160" y="-1" width="157" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -401,7 +402,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMN-ML-Qwb" userLabel="monthTextField">
-                                                    <rect key="frame" x="212" y="-1" width="106" height="61"/>
+                                                    <rect key="frame" x="214" y="-1" width="106" height="61"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
@@ -411,7 +412,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-Dv-kvP" userLabel="dropDownProvince" customClass="DropDown" customModule="iOSDropDown">
-                                                    <rect key="frame" x="-2" y="14" width="320" height="31"/>
+                                                    <rect key="frame" x="-2" y="13" width="320" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -420,7 +421,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-Ok-GXU" userLabel="dropDownCity" customClass="DropDown" customModule="iOSDropDown">
-                                                    <rect key="frame" x="-2" y="14" width="320" height="31"/>
+                                                    <rect key="frame" x="-2" y="13" width="320" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -429,7 +430,7 @@
                                                     </connections>
                                                 </textField>
                                                 <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-OY-fAl" userLabel="dropDownSex" customClass="DropDown" customModule="iOSDropDown">
-                                                    <rect key="frame" x="-1" y="12" width="319" height="33"/>
+                                                    <rect key="frame" x="-1" y="12" width="319" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -570,7 +571,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="zrS-T8-7IR">
-                                <rect key="frame" x="39" y="236" width="242" height="172.5"/>
+                                <rect key="frame" x="39" y="236" width="242" height="168.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="شهرداری گرگان" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzv-Na-UOq">
                                         <rect key="frame" x="50" y="0.0" width="142" height="25.5"/>
@@ -596,7 +597,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-PA-YEY">
-                                        <rect key="frame" x="60" y="99.5" width="122" height="33"/>
+                                        <rect key="frame" x="60" y="99.5" width="122" height="31"/>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="تایید">
@@ -607,7 +608,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBq-08-QHe">
-                                        <rect key="frame" x="60" y="139.5" width="122" height="33"/>
+                                        <rect key="frame" x="60" y="137.5" width="122" height="31"/>
                                         <color key="backgroundColor" red="0.21960784310000001" green="0.36470588240000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="IRANSansMobile-Bold" family="IRANSansMobile" pointSize="16"/>
                                         <state key="normal" title="تغییر شماره تلفن">
@@ -701,7 +702,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWt-nm-2So" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1626" y="1717"/>
+            <point key="canvasLocation" x="1781" y="1717"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="qLC-vR-M7Q">

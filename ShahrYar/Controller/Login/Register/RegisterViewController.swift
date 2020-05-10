@@ -109,15 +109,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    func sendDate(api_token: String, name: String, province: String, city: String, sex: String, BDDay: String, BDMonth: String, BDYear: String) {
+    func sendDate(api_token: String, name: String, image:Data?, province: String, city: String, sex: String, BDDay: String, BDMonth: String, BDYear: String) {
 
 //        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
 
 //        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
 
         let parameters = ["api_token": api_token, "name": name, "province": province, "city": city, "sex": sex, "birthday_day": BDDay, "birthday_month": BDMonth, "birthday_year": BDYear]
+//        let image = UIImage(named: "image.png")
 
-
+        
         AF.request(setProfileURL,
                    method: .post,
                    parameters: parameters).responseJSON { (responseData) -> Void in
@@ -196,24 +197,57 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         registerCell.nameTextField.tag = indexPath.row
         
         //Fucking TableView Setting wowowohahaha
+
+        switch indexPath.row {
+        case 0: //Name
+            print("1")
+            registerCell.nameTextField.isHidden = false
+        case 1: //Birthday
+            print("2")
+            registerCell.dayTextField.isHidden = false
+            registerCell.monthTextField.isHidden = false
+            registerCell.yearTextField.isHidden = false
+        case 2: //Sex
+            print("3")
+            registerCell.dropDownSex.isHidden = false
+        case 3: //Province
+            print("4")
+            registerCell.dropDownProvince.isHidden = false
+        case 4: //City
+            registerCell.dropDownCity.isHidden = false
+        default:
+            break
+        }
+
         
-//        switch indexPath.row {
-//        case 0: //Name
-//            registerCell.nameTextField.isHidden = false
-//        case 1: //Birthday
-//            registerCell.dayTextField.isHidden = false
-//            registerCell.monthTextField.isHidden = false
-//            registerCell.yearTextField.isHidden = false
-//        case 2: //Sex
-//            registerCell.dropDownSex.isHidden = false
-//        case 3: //Province
-//            registerCell.dropDownProvince.isHidden = false
-//        case 4: //City
-//            registerCell.dropDownCity.isHidden = false
-//        default:
-//            break
+        
+//        DispatchQueue.main.async {
+//
+//                    switch indexPath.row {
+//            //        case 0: //Name
+//            //            registerCell.nameTextField.isHidden = false
+//                    case 1: //Birthday
+//                        registerCell.dayTextField.isHidden = false
+//                        registerCell.monthTextField.isHidden = false
+//                        registerCell.yearTextField.isHidden = false
+//                    case 2: //Sex
+//                        registerCell.dropDownSex.isHidden = false
+//                    case 3: //Province
+//                        registerCell.dropDownProvince.isHidden = false
+//                    case 4: //City
+//                        registerCell.dropDownCity.isHidden = false
+//                    default:
+//                        break
+//                    }
+////        if indexPath.row == 0 {
+////            registerCell.dayTextField.isHidden = false
+////             registerCell.monthTextField.isHidden = false
+////             registerCell.yearTextField.isHidden = false
+////        } else if indexPath.row == 1 {
+////            registerCell.dropDownCity.isHidden = false
+////
+////        }
 //        }
-        
         //End of Fucking TableView Setting wowowohahaha
         
         registerCell.dropDownProvince.tag = (indexPath.row + 100)

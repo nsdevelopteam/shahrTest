@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class ProblemsViewController: UIViewController {
     
     @IBOutlet weak var problemsCollectionView: UICollectionView!
     @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
+    let requestTypesURL = "http://moshkelateshahri.xyz/api/request-types/"
+    let titles: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +25,33 @@ class ProblemsViewController: UIViewController {
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansMobile-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         rightButtonOutlet.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "IRANSansMobile", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         
+        fetchData()
+        
     }
     
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func fetchData() {
+        AF.request(requestTypesURL,
+           method: .get).responseJSON { (responseData) -> Void in
+            if((responseData.value) != nil) {
+                let result = JSON(responseData.value!)
+//                print(result)
+                for (_, res) in result {
+//                    print(res["title"])
+                    self.title?.append(res["title"].string ?? "title")
+                    
+                }
+            }
+        }
+    }
+    
 }
+
+
+
 
 extension ProblemsViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
