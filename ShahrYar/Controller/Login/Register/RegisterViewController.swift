@@ -13,6 +13,7 @@ import iOSDropDown
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var imagePicker: UIImageView!
     @IBOutlet weak var registerTableView: UITableView!
     @IBOutlet var photoHeader: UIView!
     @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
@@ -54,9 +55,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
 //        getProfileData(api_token: defaults.string(forKey: "api_token")!)
         
-        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74"
+//        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74"
+        let testToken = "zSGU80KJP41LnP8SdVM1UalIoe6GcdQ6QsA8SXUYkQVrlYEBY7nqFBT9ndGEv6GPFUd6N8CtOaYffwcge7Jq47RGLysOE8enwfOJ" //RaziPour token
         
-        sendDate(api_token: testToken, name: "aaaaaa", province: "گلستان", city: "گرگان", sex: "male", BDDay: "1", BDMonth: "2", BDYear: "1377")
+        sendDate(api_token: testToken, name: "wwwwww", province: "گلستان", city: "گرگان", sex: "male", BDDay: "1", BDMonth: "2", BDYear: "1377")
 
         getProfileData(api_token: testToken)
 
@@ -109,7 +111,31 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
 
-    func sendDate(api_token: String, name: String, image:Data?, province: String, city: String, sex: String, BDDay: String, BDMonth: String, BDYear: String) {
+
+    func openCamera()
+    {
+        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+        {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
+    func openGallary()
+    {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePicker.allowsEditing = true
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func sendDate(api_token: String, name: String, province: String, city: String, sex: String, BDDay: String, BDMonth: String, BDYear: String) {
 
 //        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
 
@@ -117,22 +143,71 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         let parameters = ["api_token": api_token, "name": name, "province": province, "city": city, "sex": sex, "birthday_day": BDDay, "birthday_month": BDMonth, "birthday_year": BDYear]
 //        let image = UIImage(named: "image.png")
+        let url = NSURL(string: setProfileURL)
 
+        postComplexPictures(url: url! as URL, params: parameters, pictures: #imageLiteral(resourceName: "problem-1"))
         
-        AF.request(setProfileURL,
-                   method: .post,
-                   parameters: parameters).responseJSON { (responseData) -> Void in
-                    if((responseData.value) != nil) {
-                        let result = JSON(responseData.value!)
-                        print(result)
-//                        self.hideWaiting()
-                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
-                        self.navigationController?.pushViewController(verifyVc, animated: true)
-                    } else {
-//                        self.hideWaiting()
-            }
-        }
+//        AF.request(setProfileURL,
+//                   method: .post,
+//                   parameters: parameters).responseJSON { (responseData) -> Void in
+//                    if((responseData.value) != nil) {
+//                        let result = JSON(responseData.value!)
+//                        print(result)
+////                        self.hideWaiting()
+//                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
+//                        self.navigationController?.pushViewController(verifyVc, animated: true)
+//                    } else {
+////                        self.hideWaiting()
+//            }
+//        }
     }
+
+          func postComplexPictures(url:URL, params:[String:Any], pictures : UIImage) {
+              
+              let headers: HTTPHeaders
+              headers = ["Content-type": "multipart/form-data"]
+              
+              AF.upload(multipartFormData: { (multipartFormData) in
+                  
+                  for (key, value) in params {
+                      print("key : \(key), value \(value)")
+                      multipartFormData.append((value as! String).data(using: String.Encoding.utf8)!, withName: key)
+                  }
+                  
+                  //let resizeImage: UIImage = self.videoCapture.resizeImage(image: pictures, targetSize: CGSize(width: 720, height: 1280))
+                  if let imageData = pictures.pngData()
+                  {
+                      multipartFormData.append(imageData, withName: "problem-6.png", fileName: "problem-6.png", mimeType: "image/jpg")
+                  }
+              }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers)
+                  .responseJSON
+                  {
+                      response in
+                      //debugPrint(response)
+                      switch response.result
+                      {
+                          
+                      case .success(let value):
+                          print("value : \(value)")
+                          do
+                          {
+                            print("eaweaweaweaeawewaeaweaw")
+//                              let parsedData = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+//                              let getvalue = try JSONDecoder().decode(fitme.self, from: parsedData)
+//                              print(getvalue.result)
+                              
+                          } catch {
+                            print(error)
+                          }
+                          
+                      case .failure(let error):
+                          print("error 발생 : \(error)")
+                          break
+                      }
+                      
+              }
+              
+          }
 
     
         
