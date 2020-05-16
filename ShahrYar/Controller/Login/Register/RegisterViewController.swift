@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Photos
 import Alamofire
 import SwiftyJSON
 import iOSDropDown
+import MobileCoreServices
 
-class RegisterViewController: UIViewController, UITextFieldDelegate {
+class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var pickImageOut: UIButton!
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -19,6 +21,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var photoHeader: UIView!
     @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     let imageHandler = ImageHandler.shared
     //Variables
@@ -45,12 +48,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         registerTableView.tableFooterView = UIView()
         registerTableView.tableHeaderView = photoHeader
         navigationItem.title = "پروفایل"
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansMobile-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
         rightButtonOutlet.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "IRANSansMobile", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(setImageFromImagePicker), name: Notification.Name("imagePicked"), object: nil)
         
         getProvince()
         getCity(provinceID: chosenProvince)
@@ -67,8 +71,30 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    @objc func setImageFromImagePicker() {
+        imagePickerView.image = appDelegate.imageUrl
+    }
+    
     @IBAction func openImagePicker(_ sender: UIButton) {
-        imageHandler.pickPhoto(vc: self)
+        DispatchQueue.main.async {
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let myPickerController = UIImagePickerController()
+                myPickerController.delegate = self
+                myPickerController.sourceType = .photoLibrary
+                myPickerController.mediaTypes = [kUTTypeJPEG as String, kUTTypeImage as String]
+                self.present(myPickerController, animated: true)
+            }
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imagePickerView.image = pickedImage
+            imagePickerView.layer.cornerRadius = imagePickerView.layer.frame.width / 2
+            pickImageOut.isHidden = true
+        }
+        
+        dismiss(animated: true, completion: nil)
     }
     
     

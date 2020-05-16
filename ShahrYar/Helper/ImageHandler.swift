@@ -12,9 +12,10 @@ import MobileCoreServices
 
 class ImageHandler: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    
     static let shared = ImageHandler()
     fileprivate var currentVC: UIViewController?
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     func pickPhoto(vc: UIViewController) {
         currentVC = vc
@@ -27,5 +28,13 @@ class ImageHandler: UIViewController, UIImagePickerControllerDelegate, UINavigat
                 self.currentVC?.present(myPickerController, animated: true)
             }
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            appDelegate.imageUrl = pickedImage
+        }
+        
+        currentVC?.dismiss(animated: true, completion: nil)
     }
 }
