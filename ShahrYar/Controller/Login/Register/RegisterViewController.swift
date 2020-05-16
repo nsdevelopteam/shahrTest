@@ -13,12 +13,14 @@ import iOSDropDown
 
 class RegisterViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var pickImageOut: UIButton!
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var registerTableView: UITableView!
     @IBOutlet var photoHeader: UIView!
     @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
-    let defaults = UserDefaults.standard
     
+    let defaults = UserDefaults.standard
+    let imageHandler = ImageHandler.shared
     //Variables
     var api_token = ""
     var name = ""
@@ -64,6 +66,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
 
     }
+    
+    @IBAction func openImagePicker(_ sender: UIButton) {
+        imageHandler.pickPhoto(vc: self)
+    }
+    
     
     func getProvince() {
         AF.request(provinceURL,

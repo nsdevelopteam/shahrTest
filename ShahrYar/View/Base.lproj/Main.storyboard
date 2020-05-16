@@ -486,6 +486,7 @@
                     <connections>
                         <outlet property="imagePickerView" destination="2r3-XJ-p8H" id="w1N-fd-PBx"/>
                         <outlet property="photoHeader" destination="RvT-Th-Hu4" id="zkR-9s-4lQ"/>
+                        <outlet property="pickImageOut" destination="r4Y-fs-N1y" id="lFy-xR-yU9"/>
                         <outlet property="registerTableView" destination="Jmz-GJ-Tsr" id="Wfj-zW-iIQ"/>
                         <outlet property="rightButtonOutlet" destination="GQp-eI-Ril" id="oz0-ZF-wim"/>
                     </connections>
@@ -503,6 +504,17 @@
                             <rect key="frame" x="83" y="27" width="75" height="75"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4Y-fs-N1y">
+                            <rect key="frame" x="83" y="27" width="75" height="75"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="12"/>
+                            <state key="normal" title="انتخاب عکس">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="openImagePicker:" destination="clN-eD-0yO" eventType="touchUpInside" id="dDe-6z-f53"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <viewLayoutGuide key="safeArea" id="ZNO-AX-VLf"/>
