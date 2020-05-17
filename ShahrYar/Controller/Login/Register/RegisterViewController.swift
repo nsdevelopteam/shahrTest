@@ -24,21 +24,28 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     let imageHandler = ImageHandler.shared
+    
+    
     //Variables
+    
+    var indexPath: IndexPath?
+    
     var api_token = ""
     var name = ""
 //    var image
     var province: [String] = []
     var cities: [String] = []
-//    var city: [] //array
     var sex = ["male", "female"]
-    var birthday_day: Int = 0
-    var birthday_month: Int = 0
-    var birthday_year: Int = 0
-    
-    
-    var chosenProvince: String = "1"
+    var birthday_day: String = "1"
+    var birthday_month: String = "1"
+    var birthday_year: String = "1370"
 
+
+    var chosenProvince: String = "1"
+    var chosenSex: String = "female"
+    var chosenCity: String = "گرگان"
+    
+    
     let setProfileURL = "http://moshkelateshahri.xyz/api/setProfile"
     let provinceURL = "http://moshkelateshahri.xyz/api/provinces"
     let sectionTitles = ["نام و نام خانوادگی", "تاریخ تولد", "جنسیت", "استان", "شهر"]
@@ -209,7 +216,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                           }
                           
                       case .failure(let error):
-                          print("error 발생 : \(error)")
+                          print("error : \(error)")
                           break
                       }
                       
@@ -223,6 +230,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
   
     @IBAction func submitButton(_ sender: Any) {
         print("Submit button Pressed")
+        let registerCell = registerTableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath!) as! RegisterCell
+        registerCell.dropDownCity.showList()
         print(name)
     }
 }
@@ -241,8 +250,11 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let registerCell = tableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath) as! RegisterCell
-
+        self.indexPath = indexPath
+        
+        
         registerCell.selectionStyle = .none
         
         registerCell.nameTextField.delegate = self
@@ -311,8 +323,24 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
             registerCell.dropDownProvince.optionArray = self.province
         }
         
-        registerCell.dropDownProvince.listWillAppear {
-            registerCell.dropDownProvince.optionArray = self.cities
+        registerCell.dropDownCity.listWillAppear {
+            registerCell.dropDownCity.optionArray = self.cities
+        }
+        
+        registerCell.dropDownSex.listWillAppear {
+            registerCell.dropDownSex.optionArray = self.sex
+        }
+        
+        
+        
+        registerCell.dropDownProvince.didSelect{(selectedText , index ,id) in
+            self.chosenProvince = selectedText
+        }
+        registerCell.dropDownCity.didSelect{(selectedText , index ,id) in
+            self.chosenCity = selectedText
+        }
+        registerCell.dropDownSex.didSelect{(selectedText , index ,id) in
+            self.chosenSex = selectedText
         }
         
         
@@ -320,7 +348,32 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         return registerCell
     }
     
-    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        
+//        let registerCell = registerTableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath!) as! RegisterCell
+////        registerCell.dropDownCity.showList()
+//
+//
+////        print(textField.text)
+//        switch indexPath?.section {
+//        case 0:
+//            print(registerCell.nameTextField.text)
+//            name = textField.text ?? "NAME"
+//        case 0:
+//            print(registerCell.dayTextField.text)
+//            birthday_day = textField.text ?? "DAY"
+//        case 0:
+//            print(registerCell.monthTextField.text)
+//            birthday_month = textField.text ?? "MONTH"
+//        case 0:
+//            print(registerCell.yearTextField.text)
+//            birthday_year = textField.text ?? "YEAR"
+//        default:
+//            break
+//        }
+        
+    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionTitles[section]
