@@ -15,6 +15,7 @@
 		D304EB932460795900C29983 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB912460795900C29983 /* Main.storyboard */; };
 		D304EB952460795D00C29983 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D304EB942460795D00C29983 /* Assets.xcassets */; };
 		D304EB982460795D00C29983 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D304EB962460795D00C29983 /* LaunchScreen.storyboard */; };
+		D33770D92474659E00E000C3 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33770D82474659E00E000C3 /* EmergencyViewController.swift */; };
 		D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338B28924633B7D00B94C62 /* UIExtensions.swift */; };
 		D35553CC24615785006D9D88 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CB24615785006D9D88 /* VerifyViewController.swift */; };
 		D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35553CD2461578E006D9D88 /* RegisterViewController.swift */; };
@@ -46,6 +47,7 @@
 		D304EB942460795D00C29983 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D304EB972460795D00C29983 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D304EB992460795D00C29983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D33770D82474659E00E000C3 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
 		D338B28924633B7D00B94C62 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		D35553CB24615785006D9D88 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		D35553CD2461578E006D9D88 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D3CE347724657A9D0083DA6B /* SideMenuViewController.swift */,
+				D33770D72474657C00E000C3 /* Emergency */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -125,6 +128,14 @@
 				D304EB992460795D00C29983 /* Info.plist */,
 			);
 			path = ShahrYar;
+			sourceTree = "<group>";
+		};
+		D33770D72474657C00E000C3 /* Emergency */ = {
+			isa = PBXGroup;
+			children = (
+				D33770D82474659E00E000C3 /* EmergencyViewController.swift */,
+			);
+			path = Emergency;
 			sourceTree = "<group>";
 		};
 		D338B28624633B0C00B94C62 /* Helper */ = {
@@ -428,6 +439,7 @@
 				D304EB8C2460795900C29983 /* AppDelegate.swift in Sources */,
 				3C52D4CD246453E0005E490F /* MapViewController.swift in Sources */,
 				D35553E42461AF97006D9D88 /* IntroViewController.swift in Sources */,
+				D33770D92474659E00E000C3 /* EmergencyViewController.swift in Sources */,
 				D304EB8E2460795900C29983 /* SceneDelegate.swift in Sources */,
 				D35553CE2461578E006D9D88 /* RegisterViewController.swift in Sources */,
 				D3CE347824657A9D0083DA6B /* SideMenuViewController.swift in Sources */,
@@ -578,8 +590,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
-				DEVELOPMENT_TEAM = LA66LW5978;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -599,8 +611,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 48;
-				DEVELOPMENT_TEAM = LA66LW5978;
+				CURRENT_PROJECT_VERSION = 49;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

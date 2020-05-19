@@ -19,20 +19,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var registerTableView: UITableView!
     @IBOutlet var photoHeader: UIView!
-    @IBOutlet weak var rightButtonOutlet: UIBarButtonItem!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     let imageHandler = ImageHandler.shared
     
-    
-    //Variables
-    
     var indexPath: IndexPath?
-    
     var api_token = ""
     var name = ""
-//    var image
     var province: [String] = []
     var cities: [String] = []
     var sex = ["male", "female"]
@@ -50,17 +44,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     let provinceURL = "http://moshkelateshahri.xyz/api/provinces"
     let sectionTitles = ["نام و نام خانوادگی", "تاریخ تولد", "جنسیت", "استان", "شهر"]
     
-    
+    let testToken = "zSGU80KJP41LnP8SdVM1UalIoe6GcdQ6QsA8SXUYkQVrlYEBY7nqFBT9ndGEv6GPFUd6N8CtOaYffwcge7Jq47RGLysOE8enwfOJ"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         registerTableView.tableFooterView = UIView()
         registerTableView.tableHeaderView = photoHeader
         navigationItem.title = "پروفایل"
         self.navigationController!.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "IRANSansMobile-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: UIColor.white]
-        rightButtonOutlet.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "IRANSansMobile", size: 16)!, NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(setImageFromImagePicker), name: Notification.Name("imagePicked"), object: nil)
         
         getProvince()
@@ -68,14 +60,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         
 //        getProfileData(api_token: defaults.string(forKey: "api_token")!)
         
-//        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74"
-        let testToken = "zSGU80KJP41LnP8SdVM1UalIoe6GcdQ6QsA8SXUYkQVrlYEBY7nqFBT9ndGEv6GPFUd6N8CtOaYffwcge7Jq47RGLysOE8enwfOJ" //RaziPour token
-        
-        sendDate(api_token: testToken, name: "wwwwww", province: "گلستان", city: "گرگان", sex: "male", BDDay: "1", BDMonth: "2", BDYear: "1377")
+//        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74" //RaziPour token
 
         getProfileData(api_token: testToken)
-
-
     }
     
     @objc func setImageFromImagePicker() {
@@ -152,29 +139,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     
     func sendDate(api_token: String, name: String, province: String, city: String, sex: String, BDDay: String, BDMonth: String, BDYear: String) {
 
-//        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
-
-//        var parameters = ["api_token": "", "name": "", "image": "", "province": "", "city": "", "sex": "", "birthday_day":"", "birthday_month": "", "birthday_year": ""]
-
         let parameters = ["api_token": api_token, "name": name, "province": province, "city": city, "sex": sex, "birthday_day": BDDay, "birthday_month": BDMonth, "birthday_year": BDYear]
-//        let image = UIImage(named: "image.png")
+
         let url = NSURL(string: setProfileURL)
 
-        postComplexPictures(url: url! as URL, params: parameters, pictures: #imageLiteral(resourceName: "problem-1"))
-        
-//        AF.request(setProfileURL,
-//                   method: .post,
-//                   parameters: parameters).responseJSON { (responseData) -> Void in
-//                    if((responseData.value) != nil) {
-//                        let result = JSON(responseData.value!)
-//                        print(result)
-////                        self.hideWaiting()
-//                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
-//                        self.navigationController?.pushViewController(verifyVc, animated: true)
-//                    } else {
-////                        self.hideWaiting()
-//            }
-//        }
+        postComplexPictures(url: url! as URL, params: parameters, pictures: imagePickerView.image!)
     }
 
           func postComplexPictures(url:URL, params:[String:Any], pictures : UIImage) {
@@ -211,8 +180,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
 //                              let getvalue = try JSONDecoder().decode(fitme.self, from: parsedData)
 //                              print(getvalue.result)
                               
-                          } catch {
-                            print(error)
                           }
                           
                       case .failure(let error):
@@ -222,17 +189,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                       
               }
     }
-    
-    
-    @IBAction func dismissView(_ sender: UIBarButtonItem) {
-        dismiss(animated: true, completion: nil)
-    }
   
     @IBAction func submitButton(_ sender: Any) {
         print("Submit button Pressed")
-        let registerCell = registerTableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath!) as! RegisterCell
-        registerCell.dropDownCity.showList()
-        print(name)
+        sendDate(api_token: testToken, name: "wwwwww", province: "گلستان", city: "گرگان", sex: "male", BDDay: "1", BDMonth: "2", BDYear: "1377")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
+        
+//        let registerCell = registerTableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath!) as! RegisterCell
+//        registerCell.dropDownCity.showList()
+//        print(name)
     }
 }
 

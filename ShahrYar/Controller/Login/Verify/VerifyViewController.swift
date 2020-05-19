@@ -20,7 +20,6 @@ class VerifyViewController: UIViewController {
     let defaults = UserDefaults.standard
     var isUserRegisterdBefore = false
     var api_token = ""
-//    var Username = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()

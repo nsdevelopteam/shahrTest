@@ -61,6 +61,10 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
             present(vc, animated: true, completion: nil)
+        case 4:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "emergencyVc")
+            present(vc, animated: true, completion: nil)
         default:
             break
         }
