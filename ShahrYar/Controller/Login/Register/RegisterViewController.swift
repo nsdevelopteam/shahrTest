@@ -78,7 +78,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             let info = notification.userInfo!
             let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-                if self.view.frame.origin.y == 0 {
+                if self.view.frame.origin.y != 0 {
                     self.view.frame.origin.y -= 200
                 }
             }
