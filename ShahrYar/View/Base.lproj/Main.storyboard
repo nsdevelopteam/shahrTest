@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rRq-IK-dou">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8J-Vl-hRs">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,7 +20,7 @@
         <!--Intro View Controller-->
         <scene sceneID="QWC-yY-weJ">
             <objects>
-                <viewController storyboardIdentifier="introVc" id="252-q9-ucm" customClass="IntroViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="252-q9-ucm" customClass="IntroViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sn0-3g-7Wh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,7 +117,7 @@
         <!--Home View Controller-->
         <scene sceneID="OKm-pd-ucN">
             <objects>
-                <viewController storyboardIdentifier="homeVc" id="8vK-cn-y5c" customClass="HomeViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8vK-cn-y5c" customClass="HomeViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3KG-wj-2Zf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,7 +518,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zMZ-RE-lGP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rRq-IK-dou" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="introVc" automaticallyAdjustsScrollViewInsets="NO" id="rRq-IK-dou" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gab-dB-YeN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -536,7 +536,7 @@
         <!--Navigation Controller-->
         <scene sceneID="WKf-Hi-MHM">
             <objects>
-                <navigationController storyboardIdentifier="verifyVc" automaticallyAdjustsScrollViewInsets="NO" id="jEs-Kl-qfY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jEs-Kl-qfY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eJv-mu-gjE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -554,7 +554,7 @@
         <!--Verify View Controller-->
         <scene sceneID="92o-kP-DcU">
             <objects>
-                <viewController id="KMq-ZT-aWq" customClass="VerifyViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="verifyVc" id="KMq-ZT-aWq" customClass="VerifyViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mhh-Wm-C4L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,10 +723,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emergencyCell" id="NSa-QH-csi">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NSa-QH-csi" id="P9q-co-fRQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -810,10 +810,10 @@
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sideMenuCell" id="RbL-Dj-0u6">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RbL-Dj-0u6" id="q5r-N1-be4">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.40000000000000002" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -975,7 +975,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ymc-qz-CEO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K9R-fs-jd7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeVc" automaticallyAdjustsScrollViewInsets="NO" id="K9R-fs-jd7" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xSD-oj-fDF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1073,6 +1073,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gkL-G8-ctE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1626" y="1717"/>
+        </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="3qX-Sg-kCO">
+            <objects>
+                <viewController id="S8J-Vl-hRs" customClass="LaunchViewController" customModule="ShahrYar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Av-Xg-LSu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-pM-QOi">
+                                <rect key="frame" x="228" y="0.0" width="92" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Side" translatesAutoresizingMaskIntoConstraints="NO" id="42v-mK-jFl">
+                                <rect key="frame" x="0.0" y="0.0" width="92" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ShahrdariLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-hc-h5N">
+                                <rect key="frame" x="110" y="170" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.28235294119999998" green="0.47058823529999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="TQg-ao-Uyw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1va-tO-BPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1238" y="241"/>
         </scene>
     </scenes>
     <resources>

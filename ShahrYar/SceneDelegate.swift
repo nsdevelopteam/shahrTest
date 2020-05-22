@@ -12,31 +12,9 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-    func showRootView(id: String) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: id)
-            if let windowScene = scene as? UIWindowScene {
-                    let window = UIWindow(windowScene: windowScene)
-                    window.rootViewController = vc
-                    self.window = window
-                    window.makeKeyAndVisible()
-                }
-        }
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        
-//         let userLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-//
-//         if userLoggedIn == true {
-//            showRootView(id: "homeVc")
-//             print("YES")
-//         } else {
-//             print("NO")
-//            showRootView(id: "introVc")
-//        }
         
         
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

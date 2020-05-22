@@ -22,30 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-//        let isUserLoggedIn = defaults.bool(forKey: "isLoggedIn")
-//        print(isUserLoggedIn)
-        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        window?.rootViewController = storyboard.instantiateViewController(withIdentifier: (isUserLoggedIn ? "homeVc" : "introVc"))
-//        window?.makeKeyAndVisible()
-        
-
-//         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-
-
-//         self.window?.rootViewController = rootViewController
-//         self.window?.makeKeyAndVisible()
-
-        
-        
         GMSServices.provideAPIKey("AIzaSyApNnffFk1e2YKW0ubB9Q1ITgH08nYYSS0")
         
         return true
     }
-    
-
-    
 
     // MARK: UISceneSession Lifecycle
 @available(iOS 13, *)

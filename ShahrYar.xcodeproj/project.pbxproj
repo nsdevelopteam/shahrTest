@@ -32,6 +32,7 @@
 		D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347924658A4F0083DA6B /* RegisterCell.swift */; };
 		D3CE347D2465AA7C0083DA6B /* ProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347C2465AA7C0083DA6B /* ProblemsViewController.swift */; };
 		D3CE347F2465AB750083DA6B /* ProblemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CE347E2465AB750083DA6B /* ProblemsCell.swift */; };
+		D3E0D9ED247823ED00B0714A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E0D9EC247823ED00B0714A /* LaunchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		D3CE347924658A4F0083DA6B /* RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
 		D3CE347C2465AA7C0083DA6B /* ProblemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsViewController.swift; sourceTree = "<group>"; };
 		D3CE347E2465AB750083DA6B /* ProblemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemsCell.swift; sourceTree = "<group>"; };
+		D3E0D9EC247823ED00B0714A /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		D35553C5246155F0006D9D88 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D3E0D9EB247823B100B0714A /* Launch */,
 				D3CE347B2465AA4C0083DA6B /* Problems */,
 				D3CE3476246575810083DA6B /* Map */,
 				D35553DF2461A1E4006D9D88 /* Home */,
@@ -263,6 +266,14 @@
 				D3CE347E2465AB750083DA6B /* ProblemsCell.swift */,
 			);
 			path = Problems;
+			sourceTree = "<group>";
+		};
+		D3E0D9EB247823B100B0714A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				D3E0D9EC247823ED00B0714A /* LaunchViewController.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		F42E26E6EBB9495614466C60 /* Frameworks */ = {
@@ -432,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CE347A24658A4F0083DA6B /* RegisterCell.swift in Sources */,
+				D3E0D9ED247823ED00B0714A /* LaunchViewController.swift in Sources */,
 				D3CE347F2465AB750083DA6B /* ProblemsCell.swift in Sources */,
 				D35553E12461A1F5006D9D88 /* HomeViewController.swift in Sources */,
 				D338B28A24633B7D00B94C62 /* UIExtensions.swift in Sources */,
@@ -591,7 +603,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 52;
 				DEVELOPMENT_TEAM = 3W398LB97N;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -614,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 49;
+				CURRENT_PROJECT_VERSION = 52;
 				DEVELOPMENT_TEAM = 3W398LB97N;
 				INFOPLIST_FILE = ShahrYar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
