@@ -26,33 +26,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-            initializeTheLocationManager()
-            self.mapView.isMyLocationEnabled = true
-            self.mapView.delegate = self
-            textField.delegate = self
-
-            self.hideKeyboardWhenTappedAround()
-            
+        
+        initializeTheLocationManager()
+        self.mapView.isMyLocationEnabled = true
+        self.mapView.delegate = self
+        textField.delegate = self
+        
+        self.hideKeyboardWhenTappedAround()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        }
+    }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            let info = notification.userInfo!
+            let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= 200
+                }
             }
         }
-    }
-
+        
     @objc func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            let info = notification.userInfo!
+            let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+                if self.view.frame.origin.y != 0 {
+                    self.view.frame.origin.y += 200
+                }
+            }
         }
-    }
 
 
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {

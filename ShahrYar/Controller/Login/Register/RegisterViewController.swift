@@ -67,6 +67,35 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
 //        getProfileData(api_token: defaults.string(forKey: "api_token")!)
         
         getProfileData(api_token: token!)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissViewKeyboard))
+               view.addGestureRecognizer(tap)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+        
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            let info = notification.userInfo!
+            let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= 200
+                }
+            }
+        }
+        
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            let info = notification.userInfo!
+            let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+                if self.view.frame.origin.y != 0 {
+                    self.view.frame.origin.y += 200
+                }
+            }
+        }
+    
+    @objc func dismissViewKeyboard() {
+        view.endEditing(true)
     }
     
     @objc func setImageFromImagePicker() {
@@ -337,22 +366,22 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         if textField.tag == 1 {
-           print(textField.text) //Name
             name = textField.text ?? "UserName"
-           }
+        }
         else if textField.tag == 2 {
-           print(textField.text) //day
             birthday_day = textField.text ?? "1"
-           }
+        }
         else if textField.tag == 3 {
-           print(textField.text) //month
             birthday_month = textField.text ?? "1"
-           }
+        }
         else if textField.tag == 4 {
-           print(textField.text) //year
             birthday_year = textField.text ?? "1370"
-           }
-        
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    self.view.endEditing(true)
+        return false
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
