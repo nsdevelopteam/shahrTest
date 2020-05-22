@@ -68,8 +68,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         
         getProfileData(api_token: token!)
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissViewKeyboard))
-               view.addGestureRecognizer(tap)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -78,8 +76,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             let info = notification.userInfo!
             let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-                if self.view.frame.origin.y != 0 {
-                    self.view.frame.origin.y -= 200
+                if self.registerTableView.frame.origin.y == 0 {
+                    self.registerTableView.frame.origin.y -= 200
                 }
             }
         }
@@ -88,15 +86,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
             let info = notification.userInfo!
             let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-                if self.view.frame.origin.y != 0 {
-                    self.view.frame.origin.y += 200
+                if self.registerTableView.frame.origin.y != 0 {
+                    self.registerTableView.frame.origin.y += 200
                 }
             }
         }
-    
-    @objc func dismissViewKeyboard() {
-        view.endEditing(true)
-    }
     
     @objc func setImageFromImagePicker() {
         imagePickerView.image = appDelegate.imageUrl
@@ -304,6 +298,7 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         case 2: //Sex
             print("3")
             registerCell.dropDownSex.isHidden = false
+            registerCell.dropDownSex.isSearchEnable = false
             
             registerCell.dayTextField.isHidden = true
             registerCell.monthTextField.isHidden = true
@@ -314,6 +309,7 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         case 3: //Province
             print("4")
             registerCell.dropDownProvince.isHidden = false
+            registerCell.dropDownProvince.isSearchEnable = false
             
             registerCell.dropDownSex.isHidden = true
             registerCell.dayTextField.isHidden = true
@@ -323,6 +319,7 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
             registerCell.dropDownCity.isHidden = true
         case 4: //City
             registerCell.dropDownCity.isHidden = false
+            registerCell.dropDownCity.isSearchEnable = false
             
             registerCell.dropDownSex.isHidden = true
             registerCell.dayTextField.isHidden = true
