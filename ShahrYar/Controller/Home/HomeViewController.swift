@@ -106,6 +106,9 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(self.respondToSwipeGesture))
         swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
         self.view.addGestureRecognizer(swipeLeft)
+        
+        UserDefaults.standard.set(true, forKey: "isLoggedIn")
+
     }
     
     @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
@@ -124,9 +127,17 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func sideMenu(_ sender: Any) {
     }
     @IBAction func sendProblemButton(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
+//        present(vc, animated: true, completion: nil)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
+        let vc = storyboard.instantiateViewController(withIdentifier: "mapVC")
+        vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
+        
+        
+        
 //        let photos = PHPhotoLibrary.authorizationStatus()
 //        if photos == .notDetermined {
 //            PHPhotoLibrary.requestAuthorization({status in

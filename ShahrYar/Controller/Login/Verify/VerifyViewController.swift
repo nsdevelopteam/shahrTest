@@ -65,7 +65,6 @@ class VerifyViewController: UIViewController {
             vc.modalPresentationStyle = .overFullScreen
             present(vc, animated: true, completion: nil)
 //        }
-//        defaults.set(true, forKey: "isLoggedIn")
 //        defaults.synchronize()
 
     }

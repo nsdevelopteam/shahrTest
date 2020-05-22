@@ -13,12 +13,51 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    func showRootView(id: String) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: id)
+            if let windowScene = scene as? UIWindowScene {
+                    let window = UIWindow(windowScene: windowScene)
+                    window.rootViewController = vc
+                    self.window = window
+                    window.makeKeyAndVisible()
+                }
+        }
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        
+//         let userLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+//
+//         if userLoggedIn == true {
+//            showRootView(id: "homeVc")
+//             print("YES")
+//         } else {
+//             print("NO")
+//            showRootView(id: "introVc")
+//        }
+        
+        
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        
+//        let windowScene = UIApplication.shared.connectedScenes.first as! UIWindowScene
+//        window = UIWindow(windowScene: windowScene)
+//        
+//        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "homeVc") as! HomeViewController
+//        let logInVC = mainStoryboard.instantiateViewController(withIdentifier: "introVc") as! IntroViewController
+//        let rootVC = isLoggedIn ? mainVC : logInVC
+//        
+//        window?.rootViewController = rootVC
+//        window?.makeKeyAndVisible()
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

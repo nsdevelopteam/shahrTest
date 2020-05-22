@@ -19,7 +19,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var registerTableView: UITableView!
     @IBOutlet var photoHeader: UIView!
-    
+        
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let defaults = UserDefaults.standard
     let imageHandler = ImageHandler.shared
@@ -43,11 +43,17 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     let setProfileURL = "http://moshkelateshahri.xyz/api/setProfile"
     let provinceURL = "http://moshkelateshahri.xyz/api/provinces"
     let sectionTitles = ["نام و نام خانوادگی", "تاریخ تولد", "جنسیت", "استان", "شهر"]
+    var tokenGlobal: String = ""
     
-    let testToken = "zSGU80KJP41LnP8SdVM1UalIoe6GcdQ6QsA8SXUYkQVrlYEBY7nqFBT9ndGEv6GPFUd6N8CtOaYffwcge7Jq47RGLysOE8enwfOJ"
+//    let testToken = "18zwg307wJJxS3h1NUu8BQ1fEG5eL4dZYHDakhhrbvz7ZQDI2qd5ZNQNll3wMMNPtZVLxo1uPkMmB97WD3syvzeRoBeO6kBsnmhx"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let token = defaults.string(forKey: "api_token")
+        
+        tokenGlobal = token!
+        
         
         registerTableView.tableFooterView = UIView()
         registerTableView.tableHeaderView = photoHeader
@@ -60,9 +66,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         
 //        getProfileData(api_token: defaults.string(forKey: "api_token")!)
         
-//        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74" //RaziPour token
-
-        getProfileData(api_token: testToken)
+        getProfileData(api_token: token!)
     }
     
     @objc func setImageFromImagePicker() {
@@ -143,7 +147,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
 
         let url = NSURL(string: setProfileURL)
 
-        postComplexPictures(url: url! as URL, params: parameters, pictures: imagePickerView.image!)
+        if imagePickerView.image == nil {
+            postComplexPictures(url: url! as URL, params: parameters, pictures: #imageLiteral(resourceName: "ShahrdariLogo"))
+        } else {
+            postComplexPictures(url: url! as URL, params: parameters, pictures: imagePickerView.image!)
+        }
+        
     }
 
           func postComplexPictures(url:URL, params:[String:Any], pictures : UIImage) {
@@ -192,7 +201,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
   
     @IBAction func submitButton(_ sender: Any) {
         print("Submit button Pressed")
-        sendDate(api_token: testToken, name: "wwwwww", province: "گلستان", city: "گرگان", sex: "male", BDDay: "1", BDMonth: "2", BDYear: "1377")
+        
+        sendDate(api_token: tokenGlobal, name: name, province: chosenProvince, city: chosenCity, sex: chosenSex, BDDay: birthday_day, BDMonth: birthday_month, BDYear: birthday_year)
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "homeVc")
         vc.modalPresentationStyle = .overCurrentContext
@@ -223,6 +234,7 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         self.indexPath = indexPath
         
         
+        
         registerCell.selectionStyle = .none
         
         registerCell.nameTextField.delegate = self
@@ -237,6 +249,7 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
         case 0: //Name
             print("1")
             registerCell.nameTextField.isHidden = false
+            registerCell.nameTextField.tag = 1
             
             registerCell.dropDownSex.isHidden = true
             registerCell.dayTextField.isHidden = true
@@ -249,6 +262,11 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
             registerCell.dayTextField.isHidden = false
             registerCell.monthTextField.isHidden = false
             registerCell.yearTextField.isHidden = false
+            
+            registerCell.dayTextField.tag = 2
+            registerCell.monthTextField.tag = 3
+            registerCell.yearTextField.tag = 4
+
             
             registerCell.dropDownSex.isHidden = true
             registerCell.nameTextField.isHidden = true
@@ -318,28 +336,22 @@ extension RegisterViewController: UITableViewDataSource, UITableViewDelegate {
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
-        
-//        let registerCell = registerTableView.dequeueReusableCell(withIdentifier: "resgisterCell", for: indexPath!) as! RegisterCell
-////        registerCell.dropDownCity.showList()
-//
-//
-////        print(textField.text)
-//        switch indexPath?.section {
-//        case 0:
-//            print(registerCell.nameTextField.text)
-//            name = textField.text ?? "NAME"
-//        case 0:
-//            print(registerCell.dayTextField.text)
-//            birthday_day = textField.text ?? "DAY"
-//        case 0:
-//            print(registerCell.monthTextField.text)
-//            birthday_month = textField.text ?? "MONTH"
-//        case 0:
-//            print(registerCell.yearTextField.text)
-//            birthday_year = textField.text ?? "YEAR"
-//        default:
-//            break
-//        }
+        if textField.tag == 1 {
+           print(textField.text) //Name
+            name = textField.text ?? "UserName"
+           }
+        else if textField.tag == 2 {
+           print(textField.text) //day
+            birthday_day = textField.text ?? "1"
+           }
+        else if textField.tag == 3 {
+           print(textField.text) //month
+            birthday_month = textField.text ?? "1"
+           }
+        else if textField.tag == 4 {
+           print(textField.text) //year
+            birthday_year = textField.text ?? "1370"
+           }
         
     }
     

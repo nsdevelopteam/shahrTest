@@ -120,6 +120,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     @IBAction func sendData(_ sender: Any) {
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
+        present(vc, animated: true, completion: nil)
 
         print("clickeddddd")
         
