@@ -77,7 +77,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
             let info = notification.userInfo!
             let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
                 if self.registerTableView.frame.origin.y == 0 {
-                    self.registerTableView.frame.origin.y -= 200
+                    self.registerTableView.frame.origin.y -= 150
                 }
             }
         }
@@ -87,7 +87,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
             let info = notification.userInfo!
             let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
                 if self.registerTableView.frame.origin.y != 0 {
-                    self.registerTableView.frame.origin.y += 200
+                    self.registerTableView.frame.origin.y += 150
                 }
             }
         }
