@@ -132,7 +132,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //        present(vc, animated: true, completion: nil)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "mapVC")
+        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
         

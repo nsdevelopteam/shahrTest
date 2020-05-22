@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let defaults = UserDefaults.standard
     var imageUrl = UIImage()
     
+    var selectedImageProblems = UIImage()
+    var numberOfProblem: String = "1"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         

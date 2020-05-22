@@ -14,6 +14,9 @@ import SwiftyJSON
 class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var mapView: GMSMapView!
+
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
     let appURL = "http://moshkelateshahri.xyz/api/app/"
     var locationManager = CLLocationManager()
     @IBOutlet weak var textField: UITextField!
@@ -30,17 +33,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             textField.delegate = self
 
             self.hideKeyboardWhenTappedAround()
-        
-        let locationcoordinate = getLocation()
-        let testToken = "GihrnWP3rxmkplX57xPUHIhIGW43Pduz5tVooCCE0cjpncpY9psc3zKt3fnkZUfg0cMKUkyQIqwRFVJ0rGYbNJj8RUU8nYH5bE74"
-
-        sendLocationAndData(api_token: testToken, lat: locationcoordinate[0], lng: locationcoordinate[1], type_id: "1", description: "test description")
-        
+            
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-
+        
         }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -82,24 +79,73 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         cameraMoveToLocation(toLocation: location)
 
     }
+    
+
+    func postComplexPictures(url:URL, params:[String:Any], pictures : UIImage) {
+          
+          let headers: HTTPHeaders
+          headers = ["Content-type": "multipart/form-data"]
+          
+          AF.upload(multipartFormData: { (multipartFormData) in
+              
+              for (key, value) in params {
+                  print("key : \(key), value \(value)")
+                  multipartFormData.append((value as! String).data(using: String.Encoding.utf8)!, withName: key)
+              }
+              
+              if let imageData = pictures.pngData()
+              {
+                  multipartFormData.append(imageData, withName: "problem-6.png", fileName: "problem-6.png", mimeType: "image/jpg")
+              }
+          }, to: url, usingThreshold: UInt64.init(), method: .post, headers: headers)
+              .responseJSON
+              {
+                  response in
+                  //debugPrint(response)
+                  switch response.result
+                  {
+                      
+                  case .success(let value):
+                      print("value : \(value)")
+                      do
+                      {
+//                              let parsedData = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
+//                              let getvalue = try JSONDecoder().decode(fitme.self, from: parsedData)
+//                              print(getvalue.result)
+                          
+                      }
+                      
+                  case .failure(let error):
+                      print("error : \(error)")
+                      break
+                  }
+          }
+    }
+
 
     func sendLocationAndData(api_token: String, lat: String, lng: String, type_id: String, description: String) {
         
         let parameters = ["api_token": api_token, "name": lat, "province": lng, "type_id": type_id, "description": description]
+        let url = NSURL(string: appURL)
 
-        AF.request(appURL,
-                   method: .post,
-                   parameters: parameters).responseJSON { (responseData) -> Void in
-                    if((responseData.value) != nil) {
-                        let result = JSON(responseData.value!)
-                        print(result)
-//                        self.hideWaiting()
-                        guard let verifyVc = self.storyboard?.instantiateViewController(withIdentifier: "homeVc") as? VerifyViewController else { return }
-                        self.navigationController?.pushViewController(verifyVc, animated: true)
-                    } else {
-//                        self.hideWaiting()
+        if appDelegate.selectedImageProblems.images != nil {
+
+            postComplexPictures(url: url! as URL, params: parameters, pictures: appDelegate.selectedImageProblems)
+            
+        } else {
+                    
+            AF.request(appURL,
+                       method: .post,
+                       parameters: parameters).responseJSON { (responseData) -> Void in
+                        if((responseData.value) != nil) {
+                            let result = JSON(responseData.value!)
+                            print(result)
+                        } else {
+                }
             }
         }
+
+
     }
     
     func getLocation() -> [String] {
@@ -120,11 +166,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     
     @IBAction func sendData(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "problemsVc")
-        present(vc, animated: true, completion: nil)
+        let api_token = UserDefaults.standard.string(forKey: "api_token")!
+        
+        let locationcoordinate = getLocation()
 
-        print("clickeddddd")
+        let numberOfProblem = appDelegate.numberOfProblem
+        
+        sendLocationAndData(api_token: api_token, lat: locationcoordinate[0], lng: locationcoordinate[1], type_id: numberOfProblem, description: textField.text ?? "مشکل")
+
+        dismiss(animated: true, completion: nil)
         
     }
     
@@ -152,6 +202,7 @@ extension MapViewController {
          marker.map = mapView
     }
 }
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
