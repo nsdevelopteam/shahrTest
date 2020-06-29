@@ -57,13 +57,56 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch indexPath.row {
+            //Profile
         case 0:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
             present(vc, animated: true, completion: nil)
+            
+            //share
+        case 1:
+
+            //Set the default sharing message.
+             let message = "Share"
+             //Set the link to share.
+             if let link = NSURL(string: "http://yoururl.com")
+             {
+                let objectsToShare = [message,link] as [Any]
+                 let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.excludedActivityTypes = [UIActivity.ActivityType.airDrop, UIActivity.ActivityType.addToReadingList]
+                self.present(activityVC, animated: true, completion: nil)
+             }
+            
+            //archive
+//        case 2:
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
+//            present(vc, animated: true, completion: nil)
+            
+            //done things
+//        case 3:
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
+//            present(vc, animated: true, completion: nil)
+            
+            //emergency numbers
         case 4:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "emergencyVc")
+            present(vc, animated: true, completion: nil)
+            
+            //learn
+//        case 5:
+
+            
+            //support
+//        case 6:
+
+            
+            //logout
+        case 7:
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "introVc")
             present(vc, animated: true, completion: nil)
         default:
             break

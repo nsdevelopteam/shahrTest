@@ -125,6 +125,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     // MARK: - Actions
     @IBAction func sideMenu(_ sender: Any) {
+        
     }
     @IBAction func sendProblemButton(_ sender: Any) {
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -151,6 +152,37 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //        checkLibrary()
 //        checkPermission()
         
+    }
+    
+    @IBAction func parkingFinderButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func navigateButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func boxNumbersButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func IAmHereButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func doneThingsButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
+    }
+    @IBAction func electronicCitizenButton(_ sender: Any) {
+        if let url = URL(string: "https://www.hackingwithswift.com") {
+            UIApplication.shared.open(url)
+        }
     }
     
 }

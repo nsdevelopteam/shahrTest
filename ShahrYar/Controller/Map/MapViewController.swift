@@ -130,7 +130,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
 
     func sendLocationAndData(api_token: String, lat: String, lng: String, type_id: String, description: String) {
         
-        let parameters = ["api_token": api_token, "name": lat, "province": lng, "type_id": type_id, "description": description]
+        let parameters = ["api_token": api_token, "lat": lat, "lng": lng, "type_id": type_id, "description": description]
         let url = NSURL(string: appURL)
 
         if appDelegate.selectedImageProblems.images != nil {
