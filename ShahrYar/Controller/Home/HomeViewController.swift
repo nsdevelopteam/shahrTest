@@ -9,9 +9,10 @@
 import UIKit
 import SideMenu
 import Photos
+import MessageUI
 
 
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UNUserNotificationCenterDelegate {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UNUserNotificationCenterDelegate, MFMailComposeViewControllerDelegate {
     
     // SEND PROBLEM SECTION
     func displayUploadImageDialog(btnSelected: UIButton) {
@@ -155,34 +156,131 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func parkingFinderButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
+        if let url = URL(string: "https://cafebazaar.ir/app/net.sefaresh.mycar") {
             UIApplication.shared.open(url)
         }
     }
     @IBAction func navigateButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
+        if let url = URL(string: "https://www.gorgan.ir") {
             UIApplication.shared.open(url)
         }
     }
+    
+    //Ravabet omumi
     @IBAction func boxNumbersButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
+        if let url = URL(string: "http://www.gorgan.ir/ravabetomomi.html") {
             UIApplication.shared.open(url)
         }
     }
     @IBAction func IAmHereButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
+        if let url = URL(string: "https://maps.google.com/") {
             UIApplication.shared.open(url)
         }
     }
+    // Setade khabari
     @IBAction func doneThingsButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
-            UIApplication.shared.open(url)
+        
+        let dialogMessage = UIAlertController(title: "تماس", message: "رئیس حراست: سید کمال الدین محب حسینی", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let call = UIAlertAction(title: "تماس", style: .default, handler: { (action) -> Void in
+
+            if let url = URL(string: "tel://+981732231301") {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        })
+        
+        let email = UIAlertAction(title: "ایمیل", style: .default, handler: { (action) -> Void in
+            print("email button tapped")
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+
+            // Configure the fields of the interface.
+            composeVC.setToRecipients(["heasat@gorgan.ir"])
+            composeVC.setSubject("موضوع:")
+            composeVC.setMessageBody("", isHTML: false)
+
+            // Present the view controller modally.
+            self.present(composeVC, animated: true, completion: nil)
+
+        })
+        
+        let sms = UIAlertAction(title: "پیامک", style: .default, handler: { (action) -> Void in
+            print("sms button tapped")
+
+        })
+        
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "بازگشت", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
         }
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(call)
+        dialogMessage.addAction(email)
+        dialogMessage.addAction(sms)
+        dialogMessage.addAction(cancel)
+        
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+        
     }
     @IBAction func electronicCitizenButton(_ sender: Any) {
-        if let url = URL(string: "https://www.hackingwithswift.com") {
-            UIApplication.shared.open(url)
+        
+        
+        let dialogMessage = UIAlertController(title: "شهروند الکترونیک", message: "", preferredStyle: .alert)
+        
+        // Create OK button with action handler
+        let shahrnama = UIAlertAction(title: "شهرنما", style: .default, handler: { (action) -> Void in
+
+            if let url = URL(string: "http://pano.gorgan.ir/shahrnama/") {
+                UIApplication.shared.open(url)
+            }
+            
+        })
+        
+        
+        // Create Cancel button with action handlder
+        let avarez = UIAlertAction(title: "پرداخت عوارض خودرو", style: .default) { (action) -> Void in
+            if let url = URL(string: "http://cartax.gorgan.ir/web/guest/internetvmt") {
+                UIApplication.shared.open(url)
+            }
+            
         }
+        
+        
+        // Create Cancel button with action handlder
+        let khadamateShahrvandi = UIAlertAction(title: "خدمات شهروندی", style: .default) { (action) -> Void in
+            if let url = URL(string: "http://esup.gorgan.ir:8008/new/desk.html") {
+                UIApplication.shared.open(url)
+            }
+            
+        }
+
+        
+        // Create Cancel button with action handlder
+        let pardakhteAvarez = UIAlertAction(title: "سامانه پرداخت عوارض نوسازی", style: .default) { (action) -> Void in
+            if let url = URL(string: "http://esup.gorgan.ir:8008/new/desk.html?pgname=Fish") {
+                UIApplication.shared.open(url)
+            }
+            
+        }
+        
+        let cancel = UIAlertAction(title: "بازگشت", style: .cancel) { (action) -> Void in
+            print("Cancel button tapped")
+        }
+        
+        
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(shahrnama)
+        dialogMessage.addAction(avarez)
+        dialogMessage.addAction(khadamateShahrvandi)
+        dialogMessage.addAction(pardakhteAvarez)
+        dialogMessage.addAction(cancel)
+
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
+        
     }
     
 }

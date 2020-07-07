@@ -17,7 +17,14 @@ class SideMenuViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
-    let sideMenusOptions = ["● پروفایل", "● اشتراک گذاری", "● آرشیو ارسال مشکل‌ها", "● اقدامات انجام شده", "● شماره های ضروری", "● آموزش و راهنما", "● پشتیبانی", "● خروجی"]
+    let sideMenusOptions = ["● پروفایل"
+        , "● اشتراک گذاری"
+        , "● آرشیو ارسال مشکل‌ها"
+        , "● اقدامات انجام شده"
+        , "● مشکلات"
+        , "● آموزش و راهنما"
+        , "● پشتیبانی",
+        "● خروجی"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +76,7 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
             //Set the default sharing message.
              let message = "Share"
              //Set the link to share.
-             if let link = NSURL(string: "http://yoururl.com")
+             if let link = NSURL(string: "http://gorgan.ir")
              {
                 let objectsToShare = [message,link] as [Any]
                  let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
@@ -78,30 +85,54 @@ extension SideMenuViewController: UITableViewDataSource, UITableViewDelegate {
              }
             
             //archive
-//        case 2:
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
-//            present(vc, animated: true, completion: nil)
+        case 2:
+            let alert = UIAlertController(title: "خطا", message: "مجددا تلاش کنید", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "باشه", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
             
-            //done things
-//        case 3:
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "registerVc")
-//            present(vc, animated: true, completion: nil)
+//            done things
+        case 3:
+            let alert = UIAlertController(title: "اقدامات انجام شده", message: "لطفا موضوع مورد نظر را انتخاب کنید", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "باشه", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
             
-            //emergency numbers
+//            emergency numbers
         case 4:
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "emergencyVc")
-            present(vc, animated: true, completion: nil)
+            let alert = UIAlertController(title: "خطا", message: "مجددا تلاش کنید", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "باشه", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "emergencyVc")
+//            present(vc, animated: true, completion: nil)
             
-            //learn
-//        case 5:
+//            learn
+        case 5:
+            let alert = UIAlertController(title: "خطا", message: "مجددا تلاش کنید", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "باشه", style: .default, handler: nil))
+
+            self.present(alert, animated: true)
 
             
-            //support
-//        case 6:
-
+//            support
+        case 6:
+            // Create new Alert
+            let dialogMessage = UIAlertController(title: "پشتیبانی", message: "طراحی، اجرا و پشتیبانی: سفارش دات نت\nشماره تماس: ۰۲۱-۲۸۴۲۲۵۶۵\nایمیل: info@Sefaresh.net\nوب سایت: Sefaresh.net", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "باشه", style: .default, handler: { (action) -> Void in
+             })
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
             
             //logout
         case 7:
